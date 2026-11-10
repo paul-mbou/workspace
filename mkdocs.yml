@@ -59,6 +59,7 @@ nav:
       - Vue: generated/index.md
       - Outils: generated/outils.md
       - Skills: generated/skills.md
+      - Plugins: generated/plugins.md
       - Règles: generated/rules.md
       - MCP: generated/mcp.md
       - Projets: generated/projets.md

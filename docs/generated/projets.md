@@ -2,7 +2,7 @@
 
 # Projets
 
-Généré le 2026-11-10 14:14 WAT.
+Généré le 2026-11-10 17:03 WAT.
 
 Ce dépôt est public. Les noms de dépôts privés GitHub apparaissent ici parce qu'ils font partie du workspace à restaurer.
 
@@ -38,6 +38,7 @@ Ce dépôt est public. Les noms de dépôts privés GitHub apparaissent ici parc
 
 | Dépôt | Visibilité | Langage | Description | URL |
 | --- | --- | --- | --- | --- |
+| workspace | public | Python | Workspace portable : méthodes, skills, règles et inventaire synchronisé depuis la machine. | https://github.com/paul-mbou/workspace |
 | ai-continuity-kit | public | — | Portable AI continuity kit: AGENTS.md, HANDOFF, ADRs, docs layout so any coding agent can continue a project without breaking constraints | https://github.com/paul-mbou/ai-continuity-kit |
 | el_professor | privé | Dart | El Profesor de español — fiches MINESEC pour professeurs (Flutter) | https://github.com/paul-mbou/el_professor |
 | fgm_lyrics_app | privé | Dart | Official Full Gospel Mission hymnbook app — bilingual (EN/FR) lyrics, audio, sheet music, and projection mode. Built with Flutter, Riverpod  | https://github.com/paul-mbou/fgm_lyrics_app |

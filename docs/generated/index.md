@@ -2,15 +2,16 @@
 
 # Inventaire vivant
 
-Généré le 2026-11-10 14:14 WAT.
+Généré le 2026-11-10 17:03 WAT.
 
 | Catalogue | Entrées |
 | --- | ---: |
-| Skills | 136 |
+| Skills | 143 |
+| Plugins | 11 |
 | Règles Cursor | 123 |
 | Serveurs MCP | 10 |
 | Outils présents | 24 |
 | Projets locaux | 23 |
-| Dépôts GitHub | 38 |
+| Dépôts GitHub | 39 |
 
 Après un ajout ou un retrait, lancer `python3 scripts/sync.py`, relire le diff, puis commit et push. GitHub Pages se reconstruit sur `main`.

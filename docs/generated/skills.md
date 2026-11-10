@@ -2,9 +2,9 @@
 
 # Skills
 
-Généré le 2026-11-10 14:14 WAT. 136 fichiers `SKILL.md` détectés sur cette machine.
+Généré le 2026-11-10 17:03 WAT. 143 fichiers `SKILL.md` détectés sur cette machine.
 
-Les skills personnels se réinstallent par `git clone` (voir Nouvelle machine). ECC se réinstalle depuis [affaan-m/ECC](https://github.com/affaan-m/ECC). Les skills Cursor intégrés reviennent avec l'application.
+Les skills personnels se réinstallent par `git clone` (voir Nouvelle machine). ECC se réinstalle depuis [affaan-m/ECC](https://github.com/affaan-m/ECC). Les skills Cursor intégrés reviennent avec l'application. Ceux d'un plugin Cursor restent dans `~/.cursor/plugins/local/<plugin>/skills`, avec `agents/` et `resources/`.
 
 ## Personnel (5)
 
@@ -15,6 +15,18 @@ Les skills personnels se réinstallent par `git clone` (voir Nouvelle machine). 
 | `payment-gateway` | `payment-gateway` | https://github.com/paul-mbou/payment-gateway.git | Provider-agnostic PaymentGateway port so checkout, orders, and UI never couple to a PSP. Use when implementing, swapping, or adding any payment provider (Payunit, Stripe, IAP, Mobile Money), or when the user mentions payment adapter, passer |
 | `payunit-integration` | `payunit-integration` | https://github.com/paul-mbou/payunit-integration.git | Integrates Payunit as a PaymentGateway adapter (Mobile Money, cards, hosted checkout) so the app can switch PSPs without rewriting checkout. Always scans architecture first. Use when the user mentions Payunit, flutter_payunit, @payunit/node |
 | `weekly-features-recap` | `weekly-features-recap` | https://github.com/paul-mbou/weekly-features-recap.git | Produces human-friendly weekly project recaps for PMs and non-developers from git history and Cursor transcripts. Outputs Recap, Standup, and Changelog in plain language. Use when the user asks for weekly recap, sprint summary, what we ship |
+
+## Plugin Cursor (7)
+
+| Skill | Chemin | Remote | Rôle |
+| --- | --- | --- | --- |
+| `egm-bootstrap` | `egm/skills/egm-bootstrap` | https://github.com/google/elephant-goldfish-model | Bootstrap directory README.md files across a repository subtree. |
+| `egm-brainstorm` | `egm/skills/egm-brainstorm` | https://github.com/google/elephant-goldfish-model | Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human re |
+| `egm-draft` | `egm/skills/egm-draft` | https://github.com/google/elephant-goldfish-model | Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on re |
+| `egm-drift-report` | `egm/skills/egm-drift-report` | https://github.com/google/elephant-goldfish-model | Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs  |
+| `egm-resolve` | `egm/skills/egm-resolve` | https://github.com/google/elephant-goldfish-model | The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints. |
+| `egm-review` | `egm/skills/egm-review` | https://github.com/google/elephant-goldfish-model | Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, an |
+| `egm-review-loop` | `egm/skills/egm-review-loop` | https://github.com/google/elephant-goldfish-model | Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use  |
 
 ## Design (9)
 

@@ -17,13 +17,13 @@ Le site rendu est la lecture. Le dépôt Git est la sauvegarde. Les deux avancen
 | Tests, revue, secrets | [Qualité et sécurité](methodes/qualite.md) |
 | UI web ou mobile | [Interface](methodes/interface.md) |
 | Stack du moment | [Web](stacks/web.md), [Mobile](stacks/mobile.md), [Services](stacks/services.md) |
-| Liste réelle des skills, règles, MCP, projets | [Inventaire](generated/index.md) |
+| Liste réelle des skills, plugins, règles, MCP, projets | [Inventaire](generated/index.md) |
 
 ## Ce qui est figé, ce qui est régénéré
 
 Les pages de méthodes décrivent des choix durables : ordre de lecture d'un dépôt, règles de commit, façon de vérifier une interface, séparation entre skill personnel et bibliothèque ECC.
 
-L'inventaire est une photo de la machine au dernier sync. Ajouter un skill, retirer une règle ou installer un CLI change cette photo uniquement après `python3 scripts/sync.py`.
+L'inventaire est une photo de la machine au dernier sync. Ajouter un skill, un plugin, retirer une règle ou installer un CLI change cette photo uniquement après `python3 scripts/sync.py`.
 
 ## Identité observée
 

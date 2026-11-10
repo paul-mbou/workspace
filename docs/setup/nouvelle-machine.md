@@ -65,6 +65,7 @@ fi
 | Cursor, Android Studio | `/Applications` (casks) |
 | Skills personnels | `~/.cursor/skills/<nom>` |
 | Règles personnelles | `~/.cursor/rules/*.mdc` copiées depuis `kit/personal-rules` |
+| Elephant-Goldfish Model | `~/.cursor/plugins/local/egm`, Claude `egm@egm`, `~/.gemini/config/plugins/egm` |
 
 Skills clonés :
 
@@ -76,6 +77,8 @@ Skills clonés :
 - `https://github.com/Endeavor068/ui-design-director.git`
 
 Toute modification du skill `ui-design-director` se commit et se pousse sur `origin`. C'est la seule exception à « commit uniquement sur demande » : la règle `ui-design-director-github` l'exige.
+
+Le plugin [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) est installé pour toute la machine, pas dans un dépôt. Cursor lit `~/.cursor/plugins/local/egm` (skills, agents, resources et règle). Claude Code reçoit `egm@egm` au scope utilisateur quand `claude` est dans le PATH. Antigravity lit `~/.gemini/config/plugins/egm`. Recharger Cursor après l'installation. Les commandes sont `/egm-brainstorm`, `/egm-draft` et `/egm-review`. Le commit source est dans `~/.cursor/plugins/local/egm/.egm-source-sha`. Ne pas copier seulement `skills/` : les skills lisent `agents/` et `resources/` à côté.
 
 ## 4. À installer à la main
 
@@ -103,7 +106,7 @@ cp kit/mcp.example.json ~/.cursor/mcp.json
 
 Remplacer chaque `<REDACTED>` depuis le gestionnaire de mots de passe. Le fichier réel contient des jetons Figma, Postman et Google Stitch. Il reste sur la machine.
 
-Hooks Claude Code observés dans `~/.claude/settings.json` : `PostToolUse` (Edit|Write), `PreCompact` et `TaskCompleted` appellent `jcodemunch-mcp`. Plugin activé : `floorplan@floorplan` (marketplace `haydenschmitty/floorplan`). Thème : `dark-ansi`.
+Hooks Claude Code observés dans `~/.claude/settings.json` : `PostToolUse` (Edit|Write), `PreCompact` et `TaskCompleted` appellent `jcodemunch-mcp`. Plugins utilisateur activés : `floorplan@floorplan` (marketplace `haydenschmitty/floorplan`) et `egm@egm` (marketplace `google/elephant-goldfish-model`). Thème : `dark-ansi`.
 
 ## 6. Vérifier
 

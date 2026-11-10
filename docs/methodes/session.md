@@ -6,7 +6,7 @@ Paul est ingénieur logiciel. Le travail se fait dans le code : lire, modifier, 
 
 1. Lire le contrat du dépôt, dans l'ordre de [Continuité](continuite.md).
 2. Si la zone est large ou inconnue, passer par jCodeMunch (voir [Contexte](contexte.md)).
-3. Si la demande est ambiguë et chère à inverser, écrire le plan ou l'ADR avant le code.
+3. Si la demande est ambiguë et chère à inverser, écrire le plan ou l'ADR avant le code. Un design logiciel passe par le plugin [Elephant-Goldfish Model](https://github.com/google/elephant-goldfish-model) : `/egm-brainstorm`, puis `/egm-draft`, puis `/egm-review`. L'elephant garde le contexte du projet ; les reviewers goldfish relisent le document sans l'historique de la conversation. L'approbation reste humaine avant d'implémenter.
 4. Repérer la règle de calcul ou le design system déjà présent. Ne pas en inventer un autre.
 
 ## Pendant

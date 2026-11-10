@@ -166,12 +166,38 @@ def skill_records(root: Path, group: str) -> list[dict[str, str]]:
     return records
 
 
+def collect_cursor_plugin_skills() -> list[dict[str, str]]:
+    local = HOME / ".cursor/plugins/local"
+    if not local.exists():
+        return []
+    records = []
+    for plugin_dir in sorted(path for path in local.iterdir() if path.is_dir()):
+        meta = read_json(plugin_dir / ".cursor-plugin" / "plugin.json")
+        remote = str(meta.get("repository") or "")
+        skills_root = plugin_dir / "skills"
+        if not skills_root.exists():
+            continue
+        for skill in sorted(skills_root.rglob("SKILL.md")):
+            meta_skill = frontmatter(skill)
+            records.append(
+                {
+                    "group": "cursor-plugin",
+                    "path": skill.parent.relative_to(local).as_posix(),
+                    "name": meta_skill.get("name", skill.parent.name),
+                    "description": meta_skill.get("description", ""),
+                    "remote": remote,
+                }
+            )
+    return records
+
+
 def collect_skills() -> list[dict[str, str]]:
     records = []
     records.extend(skill_records(HOME / ".cursor/skills", "cursor"))
     records.extend(skill_records(HOME / ".cursor/skills-cursor", "cursor-builtin"))
     records.extend(skill_records(HOME / ".claude/skills", "claude"))
     records.extend(skill_records(HOME / ".agents/skills", "agents"))
+    records.extend(collect_cursor_plugin_skills())
     store = HOME / "Library/Application Support/Cursor/AgentStores"
     if store.exists():
         for skill in sorted(store.glob("**/skills/*/SKILL.md")):
@@ -188,9 +214,99 @@ def collect_skills() -> list[dict[str, str]]:
     return records
 
 
+def read_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def shown(path: str) -> str:
+    text = path or ""
+    home = str(HOME)
+    if text.startswith(home):
+        return "~" + text[len(home) :]
+    return text or "—"
+
+
+def collect_plugins() -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    local = HOME / ".cursor/plugins/local"
+    if local.exists():
+        for plugin_dir in sorted(path for path in local.iterdir() if path.is_dir()):
+            meta = read_json(plugin_dir / ".cursor-plugin" / "plugin.json")
+            if not meta:
+                meta = read_json(plugin_dir / "plugin.json")
+            sha_file = plugin_dir / ".egm-source-sha"
+            sha = sha_file.read_text(encoding="utf-8").strip()[:12] if sha_file.exists() else ""
+            rows.append(
+                {
+                    "harness": "Cursor",
+                    "name": str(meta.get("name") or plugin_dir.name),
+                    "version": str(meta.get("version") or ""),
+                    "scope": "user",
+                    "path": shown(str(plugin_dir)),
+                    "source": str(meta.get("repository") or ""),
+                    "sha": sha,
+                }
+            )
+
+    installed = read_json(HOME / ".claude/plugins/installed_plugins.json")
+    markets = read_json(HOME / ".claude/plugins/known_marketplaces.json")
+    plugins = installed.get("plugins", {})
+    if isinstance(plugins, dict):
+        for plugin_id, entries in plugins.items():
+            if not isinstance(entries, list):
+                continue
+            marketplace = plugin_id.split("@", 1)[1] if "@" in plugin_id else ""
+            market = markets.get(marketplace, {}) if isinstance(markets, dict) else {}
+            source = ""
+            if isinstance(market, dict):
+                origin = market.get("source", {})
+                if isinstance(origin, dict) and origin.get("repo"):
+                    source = "https://github.com/" + str(origin["repo"])
+            for item in entries:
+                if not isinstance(item, dict):
+                    continue
+                sha = str(item.get("gitCommitSha") or "")[:12]
+                rows.append(
+                    {
+                        "harness": "Claude Code",
+                        "name": plugin_id,
+                        "version": str(item.get("version") or ""),
+                        "scope": str(item.get("scope") or ""),
+                        "path": shown(str(item.get("installPath") or "")),
+                        "source": source,
+                        "sha": sha,
+                    }
+                )
+
+    gemini = HOME / ".gemini/config/plugins"
+    if gemini.exists():
+        for plugin_dir in sorted(path for path in gemini.iterdir() if path.is_dir()):
+            meta = read_json(plugin_dir / "plugin.json")
+            rows.append(
+                {
+                    "harness": "Antigravity",
+                    "name": str(meta.get("name") or plugin_dir.name),
+                    "version": str(meta.get("version") or ""),
+                    "scope": "user",
+                    "path": shown(str(plugin_dir)),
+                    "source": str(meta.get("repository") or ""),
+                    "sha": "",
+                }
+            )
+    return rows
+
+
 def classify_skill(record: dict[str, str]) -> str:
     path = record["path"]
     name = record["name"]
+    if record["group"] == "cursor-plugin":
+        return "Plugin Cursor"
     if record["group"] == "cursor-builtin":
         return "Cursor intégré"
     if record["group"] == "claude":
@@ -450,7 +566,7 @@ def render_skills(skills: list[dict[str, str]], when: str) -> str:
     buckets: dict[str, list[dict[str, str]]] = {}
     for record in skills:
         buckets.setdefault(classify_skill(record), []).append(record)
-    order = ["Personnel", "Design", "Cursor personnel", "ECC", "Cursor intégré", "Claude Code", "Agents partagés", "Agent store"]
+    order = ["Personnel", "Plugin Cursor", "Design", "Cursor personnel", "ECC", "Cursor intégré", "Claude Code", "Agents partagés", "Agent store"]
     lines = [
         "<!-- generated by scripts/sync.py — do not edit by hand -->",
         "",
@@ -460,7 +576,8 @@ def render_skills(skills: list[dict[str, str]], when: str) -> str:
         "",
         "Les skills personnels se réinstallent par `git clone` (voir Nouvelle machine). "
         "ECC se réinstalle depuis [affaan-m/ECC](https://github.com/affaan-m/ECC). "
-        "Les skills Cursor intégrés reviennent avec l'application.",
+        "Les skills Cursor intégrés reviennent avec l'application. "
+        "Ceux d'un plugin Cursor restent dans `~/.cursor/plugins/local/<plugin>/skills`, avec `agents/` et `resources/`.",
         "",
     ]
     for bucket in order:
@@ -610,6 +727,48 @@ def render_projects(local: list[dict[str, str]], github: list[dict], when: str) 
     return "\n".join(lines)
 
 
+def render_plugins(plugins: list[dict[str, str]], when: str) -> str:
+    lines = [
+        "<!-- generated by scripts/sync.py — do not edit by hand -->",
+        "",
+        "# Plugins",
+        "",
+        f"Généré le {when}. {len(plugins)} plugins au scope utilisateur.",
+        "",
+        "Cursor découvre `~/.cursor/plugins/local`. "
+        "Claude Code lit `~/.claude/plugins/installed_plugins.json`. "
+        "Antigravity lit `~/.gemini/config/plugins`. "
+        "Un plugin retiré de la machine disparaît au prochain sync.",
+        "",
+    ]
+    if not plugins:
+        lines.append("Aucun plugin détecté.")
+        lines.append("")
+        return "\n".join(lines)
+    harnesses: dict[str, list[dict[str, str]]] = {}
+    for plugin in plugins:
+        harnesses.setdefault(plugin["harness"], []).append(plugin)
+    for harness in ("Cursor", "Claude Code", "Antigravity"):
+        items = harnesses.get(harness, [])
+        if not items:
+            continue
+        lines.append(f"## {harness} ({len(items)})")
+        lines.append("")
+        lines.append(md_table(
+            ["Plugin", "Version", "Scope", "Chemin", "Source", "Commit"],
+            [[
+                f"`{item['name']}`",
+                item["version"] or "—",
+                item["scope"] or "—",
+                f"`{item['path']}`",
+                item["source"] or "—",
+                f"`{item['sha']}`" if item["sha"] else "—",
+            ] for item in items],
+        ))
+        lines.append("")
+    return "\n".join(lines)
+
+
 def render_index(when: str, counts: dict[str, int]) -> str:
     return f"""<!-- generated by scripts/sync.py — do not edit by hand -->
 
@@ -620,6 +779,7 @@ Généré le {when}.
 | Catalogue | Entrées |
 | --- | ---: |
 | Skills | {counts['skills']} |
+| Plugins | {counts['plugins']} |
 | Règles Cursor | {counts['rules']} |
 | Serveurs MCP | {counts['mcp']} |
 | Outils présents | {counts['tools']} |
@@ -649,6 +809,7 @@ def copy_personal_rules() -> None:
 def main() -> None:
     when = stamp()
     skills = collect_skills()
+    plugins = collect_plugins()
     rules = collect_rules()
     mcp = collect_mcp()
     tools = collect_tools()
@@ -656,6 +817,7 @@ def main() -> None:
     github = collect_github()
 
     write(GENERATED / "skills.md", render_skills(skills, when))
+    write(GENERATED / "plugins.md", render_plugins(plugins, when))
     write(GENERATED / "rules.md", render_rules(rules, when))
     write(GENERATED / "mcp.md", render_mcp(mcp, when))
     write(GENERATED / "outils.md", render_tools(tools, when))
@@ -666,6 +828,7 @@ def main() -> None:
             when,
             {
                 "skills": len(skills),
+                "plugins": len(plugins),
                 "rules": len(rules),
                 "mcp": len(mcp),
                 "tools": sum(1 for tool in tools if tool["present"]),
@@ -677,6 +840,7 @@ def main() -> None:
     inventory = {
         "generatedAt": when,
         "skills": skills,
+        "plugins": plugins,
         "rules": rules,
         "mcp": mcp,
         "tools": tools,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10 14:14 WAT",
+  "generatedAt": "2026-11-10 17:03 WAT",
   "skills": [
     {
       "group": "cursor",
@@ -947,11 +947,161 @@
       "remote": ""
     },
     {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-bootstrap",
+      "name": "egm-bootstrap",
+      "description": "Bootstrap directory README.md files across a repository subtree.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-brainstorm",
+      "name": "egm-brainstorm",
+      "description": "Interactive ideation and brainstorming skill for the Elephant & Goldfish Model (EGM). Helps turn half-baked concepts into structured hypotheses via clarifying questions, review, and iterative refinement. Produces an RFC summary for human review or more detailed design with egm-draft.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-draft",
+      "name": "egm-draft",
+      "description": "Drafts a design document section-by-section using the concepts brief from egm-brainstorm (or user notes). This is the second step in the Elephant-Goldfish (EGM) feature flow. Use when you are ready to write a design doc after aligning on requirements + solution.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-drift-report",
+      "name": "egm-drift-report",
+      "description": "Runs drift detection on all design documents to check for document and code consistency. Produces an actionable report with differences. Use when the user asks to detect drift or check for consistency across all design documents or READMEs in a directory.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-resolve",
+      "name": "egm-resolve",
+      "description": "The Elephant resolution skill. Ingests flat deficiency reports from concurrent Goldfish reviewers, applies automated fixes for PROPOSE FIX items via UI multiple-choice gates, and presents interactive negotiation/re-sync checkpoints.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-review",
+      "name": "egm-review",
+      "description": "Orchestrates the EGM Goldfish Review Protocol. Used as part of the EGM process to perform design document reviews. Executes five review phases: Initial Zoom Out Review, Comprehension Review, Design Critique, Intermediate Zoom Out Review, and Implementation Readiness.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
+      "group": "cursor-plugin",
+      "path": "egm/skills/egm-review-loop",
+      "name": "egm-review-loop",
+      "description": "Executes the Antagonistic-Review process from the Elephant-Goldfish Model (EGM) via an automated multi-agent review loop to audit documents against qualitative standards and structural templates, and automatically apply approved fixes. Use when reviewing design docs, READMEs, feature specifications, implementation plans, or verifying document completeness and tone.",
+      "remote": "https://github.com/google/elephant-goldfish-model"
+    },
+    {
       "group": "agent-store",
       "path": "/Users/joetech/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u452313559/files/skills/true-ui-redesign",
       "name": "true-ui-redesign",
       "description": "Expert app-designer redesigns that change layout disposition and feeling—not restyles. Enforces local design-system colors (pleasant tonal hierarchy, never a new palette). Use when the user asks to redesign, relooker, or refaire le design of a page, screen, flow, or app; when color “adjustment” looks harsh or off-brand; when a previous redesign felt like the same layout with new paint; or when composing a mobile/web screen inspired by popular apps.",
       "remote": ""
+    }
+  ],
+  "plugins": [
+    {
+      "harness": "Cursor",
+      "name": "egm",
+      "version": "0.1.1",
+      "scope": "user",
+      "path": "~/.cursor/plugins/local/egm",
+      "source": "https://github.com/google/elephant-goldfish-model",
+      "sha": "6d2af49f6355"
+    },
+    {
+      "harness": "Claude Code",
+      "name": "floorplan@floorplan",
+      "version": "0.6.3",
+      "scope": "user",
+      "path": "~/.claude/plugins/cache/floorplan/floorplan/0.6.3",
+      "source": "https://github.com/haydenschmitty/floorplan",
+      "sha": "70be3f40f9c2"
+    },
+    {
+      "harness": "Claude Code",
+      "name": "egm@egm",
+      "version": "0.1.1",
+      "scope": "user",
+      "path": "~/.claude/plugins/cache/egm/egm/0.1.1",
+      "source": "https://github.com/google/elephant-goldfish-model",
+      "sha": "6d2af49f6355"
+    },
+    {
+      "harness": "Antigravity",
+      "name": "android-cli-plugin",
+      "version": "1.0.0",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/android-cli-plugin",
+      "source": "",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "chrome-devtools-plugin",
+      "version": "0.21.0",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/chrome-devtools-plugin",
+      "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "egm",
+      "version": "0.1.1",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/egm",
+      "source": "https://github.com/google/elephant-goldfish-model",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "firebase",
+      "version": "",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/firebase",
+      "source": "",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "google-antigravity-sdk",
+      "version": "0.0.4",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/google-antigravity-sdk",
+      "source": "",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "googlecloudtools.datacloud_telemetry",
+      "version": "",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/googlecloudtools.datacloud_telemetry",
+      "source": "",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "modern-web-guidance-plugin",
+      "version": "1.0.4",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/modern-web-guidance-plugin",
+      "source": "https://github.com/GoogleChrome/modern-web-guidance",
+      "sha": ""
+    },
+    {
+      "harness": "Antigravity",
+      "name": "science",
+      "version": "1.0.0",
+      "scope": "user",
+      "path": "~/.gemini/config/plugins/science",
+      "source": "https://github.com/google-deepmind/science-skills",
+      "sha": ""
     }
   ],
   "rules": [
@@ -2019,13 +2169,13 @@
   "tools": [
     {
       "command": "node",
-      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/node",
+      "path": "/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/node",
       "version": "v24.18.0",
       "present": true
     },
     {
       "command": "npm",
-      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/npm",
+      "path": "/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/npm",
       "version": "11.16.0",
       "present": true
     },
@@ -2103,13 +2253,13 @@
     },
     {
       "command": "vercel",
-      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/vercel",
+      "path": "/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/vercel",
       "version": "65.14.0",
       "present": true
     },
     {
       "command": "firebase",
-      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/firebase",
+      "path": "/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/firebase",
       "version": "15.28.2",
       "present": true
     },
@@ -2292,6 +2442,12 @@
     }
   ],
   "github": [
+    {
+      "name": "workspace",
+      "private": false,
+      "url": "https://github.com/paul-mbou/workspace",
+      "description": "Workspace portable : méthodes, skills, règles et inventaire synchronisé depuis la machine."
+    },
     {
       "name": "ai-continuity-kit",
       "private": false,

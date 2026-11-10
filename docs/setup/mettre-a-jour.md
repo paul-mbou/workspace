@@ -7,6 +7,7 @@ Le site ne voit pas la machine. GitHub Actions construit les pages Markdown déj
 | Événement | Action |
 | --- | --- |
 | Skill ajouté, déplacé ou supprimé | sync |
+| Plugin utilisateur ajouté, mis à jour ou retiré | sync |
 | Règle `.mdc` ajoutée ou supprimée | sync |
 | Serveur MCP ajouté ou retiré | sync |
 | CLI installé ou désinstallé parmi la liste surveillée | sync |

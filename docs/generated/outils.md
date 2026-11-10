@@ -2,7 +2,7 @@
 
 # Outils détectés
 
-Généré le 2026-11-10 14:14 WAT. Présents : 24. Absents du PATH et des emplacements connus : 2.
+Généré le 2026-11-10 17:03 WAT. Présents : 24. Absents du PATH et des emplacements connus : 2.
 
 Un outil retiré de la machine disparaît de la colonne Présent au prochain `python3 scripts/sync.py`.
 
@@ -10,8 +10,8 @@ Un outil retiré de la machine disparaît de la colonne Présent au prochain `py
 
 | Commande | Chemin | Version |
 | --- | --- | --- |
-| `node` | `/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/node` | v24.18.0 |
-| `npm` | `/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/npm` | 11.16.0 |
+| `node` | `/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/node` | v24.18.0 |
+| `npm` | `/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/npm` | 11.16.0 |
 | `fnm` | `/opt/homebrew/bin/fnm` | fnm 1.39.0 |
 | `git` | `/opt/homebrew/bin/git` | git version 2.50.1 |
 | `gh` | `/opt/homebrew/bin/gh` | gh version 2.97.0 (2026-07-31) |
@@ -22,8 +22,8 @@ Un outil retiré de la machine disparaît de la colonne Présent au prochain `py
 | `python3` | `/Library/Frameworks/Python.framework/Versions/3.14/bin/python3` | Python 3.14.5 |
 | `uv` | `/Users/joetech/.local/bin/uv` | uv 0.11.19 (7b2cff1c3 2026-06-03 aarch64-apple-darwin) |
 | `uvx` | `/Users/joetech/.local/bin/uvx` | uvx 0.11.19 (7b2cff1c3 2026-06-03 aarch64-apple-darwin) |
-| `vercel` | `/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/vercel` | 65.14.0 |
-| `firebase` | `/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/firebase` | 15.28.2 |
+| `vercel` | `/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/vercel` | 65.14.0 |
+| `firebase` | `/Users/joetech/.local/state/fnm_multishells/35199_1794321365731/bin/firebase` | 15.28.2 |
 | `maestro` | `/Users/joetech/.maestro/bin/maestro` | 2.5.1 |
 | `shorebird` | `/Users/joetech/.shorebird/bin/shorebird` | Shorebird 1.6.120 • git@github.com:shorebirdtech/shorebird.git |
 | `cursor` | `/usr/local/bin/cursor` | 3.29.15 |

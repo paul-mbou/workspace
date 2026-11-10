@@ -2,7 +2,7 @@
 
 # Serveurs MCP
 
-Généré le 2026-11-10 14:14 WAT depuis `~/.cursor/mcp.json`.
+Généré le 2026-11-10 17:03 WAT depuis `~/.cursor/mcp.json`.
 
 Les valeurs de clés, tokens et en-têtes d'authentification sont remplacées par `<REDACTED>`. Le fichier d'exemple versionné est `kit/mcp.example.json`. Sur une nouvelle machine, recréer `~/.cursor/mcp.json` et remplir les secrets depuis le gestionnaire de mots de passe.
 

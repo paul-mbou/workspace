@@ -2,7 +2,7 @@
 
 # Règles Cursor
 
-Généré le 2026-11-10 14:14 WAT. 123 fichiers dans `~/.cursor/rules`.
+Généré le 2026-11-10 17:03 WAT. 123 fichiers dans `~/.cursor/rules`.
 
 Les deux règles personnelles sont copiées dans `kit/personal-rules/` à chaque sync et restaurées par `scripts/bootstrap.sh`. Le reste est la bibliothèque ECC : la réinstaller, puis comparer cette liste.
 

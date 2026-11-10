@@ -64,6 +64,36 @@ clone_skill ui-design-director https://github.com/Endeavor068/ui-design-director
 say "Règles personnelles"
 cp -f "${ROOT}/kit/personal-rules/"*.mdc "${HOME_DIR}/.cursor/rules/"
 
+say "Plugin Elephant-Goldfish Model"
+install_egm() {
+  local src sha dest ag
+  src="$(mktemp -d)"
+  git clone --depth 1 https://github.com/google/elephant-goldfish-model.git "${src}/egm"
+  sha="$(git -C "${src}/egm" rev-parse HEAD)"
+  dest="${HOME_DIR}/.cursor/plugins/local/egm"
+  rm -rf "${dest}"
+  mkdir -p "${dest}"
+  cp -R "${src}/egm/.cursor-plugin" "${src}/egm/skills" "${src}/egm/agents" \
+    "${src}/egm/resources" "${src}/egm/docs" "${src}/egm/LICENSE" "${dest}/"
+  printf '%s\n' "${sha}" > "${dest}/.egm-source-sha"
+  ag="${HOME_DIR}/.gemini/config/plugins/egm"
+  rm -rf "${ag}"
+  mkdir -p "${ag}"
+  cp -R "${src}/egm/plugin.json" "${src}/egm/README.md" "${src}/egm/LICENSE" \
+    "${src}/egm/skills" "${src}/egm/agents" "${src}/egm/resources" \
+    "${src}/egm/docs" "${src}/egm/assets" "${ag}/"
+  rm -rf "${src}"
+  if command -v claude >/dev/null 2>&1; then
+    if claude plugin list 2>/dev/null | grep -q 'egm@egm'; then
+      claude plugin update egm@egm || true
+    else
+      claude plugin marketplace add google/elephant-goldfish-model --scope user
+      claude plugin install egm@egm --scope user -y
+    fi
+  fi
+}
+install_egm
+
 say "Ce que ce script ne fait pas"
 cat <<'EOF'
 - Xcode s'installe depuis le Mac App Store, puis : sudo xcodebuild -license accept && xcodebuild -runFirstLaunch
