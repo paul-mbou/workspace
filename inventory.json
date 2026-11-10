@@ -1,0 +1,2524 @@
+{
+  "generatedAt": "2026-11-10 14:14 WAT",
+  "skills": [
+    {
+      "group": "cursor",
+      "path": "ai-continuity-kit",
+      "name": "ai-continuity-kit",
+      "description": "Install and maintain a portable AI continuity kit so any coding agent (Cursor, Claude Code, Zed, Copilot, Aider, etc.) can onboard a project deeply without breaking constraints. Use when starting a new repo, migrating between AI tools, setting up AGENTS.md / HANDOFF / ADRs, or when the user asks for multi-IDE AI continuity, handoff docs, or project memory for agents.",
+      "remote": "https://github.com/paul-mbou/ai-continuity-kit.git"
+    },
+    {
+      "group": "cursor",
+      "path": "anti-ui-slop",
+      "name": "anti-ui-slop",
+      "description": "Stop AI coding agents from shipping generic UI. Use for web or mobile UI design, frontend implementation, redesigns, UI reviews, and pre-ship polish when Codex, Claude Code, Cursor, Copilot, or another agent needs a product-specific direction, complete interaction states, and a hard finish gate.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/agent-introspection-debugging",
+      "name": "agent-introspection-debugging",
+      "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports. Use when an agent run fails and you need a reproducible diagnosis instead of a retry.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/agent-self-evaluation",
+      "name": "agent-self-evaluation",
+      "description": "Use after completing any non-trivial task. The agent self-rates its output on 5 axes — accuracy, completeness, clarity, actionability, conciseness — with concrete evidence per criterion. Produces a structured 1-5 scorecard with specific improvement suggestions.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/agent-sort",
+      "name": "agent-sort",
+      "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/ai-regression-testing",
+      "name": "ai-regression-testing",
+      "description": "Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code. Use when adding regression coverage to AI-assisted code, or when the same model both wrote and reviewed a change.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/api-design",
+      "name": "api-design",
+      "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs. Use when designing or reviewing REST endpoints, resource names, status codes, pagination, or versioning.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/architecture-decision-records",
+      "name": "architecture-decision-records",
+      "description": "Capture architectural decisions as numbered ADR markdown files in docs/adr/ with context, alternatives considered, consequences, and an index README. Use when the user says 'record this decision' or 'ADR this', chooses between frameworks or databases, discusses trade-offs, or asks why the codebase is shaped this way.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/article-writing",
+      "name": "article-writing",
+      "description": "Write articles, guides, blog posts, tutorials, newsletter issues, and other long-form content in a distinctive voice derived from supplied examples or brand guidance. Use when the user wants polished written content longer than a paragraph, especially when voice consistency, structure, and credibility matter.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/backend-patterns",
+      "name": "backend-patterns",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. Use when building or reviewing Node.js, Express, or Next.js API routes and their data access.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/benchmark-methodology",
+      "name": "benchmark-methodology",
+      "description": "Use after competitive-platform-analysis has produced a tiered competitor set. Scores each competitor across nine weighted dimensions (positioning, voice, visual craft, offer packaging, evidence, enterprise-readiness, thought leadership, pricing, client's strategic tension) with explicit 1–5 rubrics and a tension-plot. Precedes competitive-report-structure.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/brand-discovery",
+      "name": "brand-discovery",
+      "description": "Use when a brand needs to discover or articulate its identity through structured multi-session interviews. Covers purpose, positioning, audience, personality, voice, narrative, and founder-brand tension across 8 modules using laddering, 5 Whys, and projective techniques. Produces a resumable session with disk-persisted state and a master brandbook (90_SYNTHESIS.md).",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/brand-voice",
+      "name": "brand-voice",
+      "description": "Build a source-derived writing style profile from real posts, essays, launch notes, docs, or site copy, then reuse that profile across content, outreach, and social workflows. Use when the user wants voice consistency without generic AI writing tropes.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/brownfield-retrospective",
+      "name": "brownfield-retrospective",
+      "description": "Run the ECC engineering process retroactively against an existing project slice. Audit current state, reconstruct past decisions, produce a four-axis gap register (thinking, coding practice, missing features, technology selection), then execute fixes forward through the plan-TDD-review pipeline. Use when adopting ECC mid-project, taking over an inherited codebase, or asking what was missed and what would have been built differently from day one.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/browser-qa",
+      "name": "browser-qa",
+      "description": "Run automated post-deploy UI verification with a browser automation MCP (claude-in-chrome, Playwright, or Puppeteer): console-error and Core Web Vitals smoke checks, form and auth-flow interaction tests, screenshot visual regression across three breakpoints, and axe-core accessibility audits ending in a SHIP / DO-NOT-SHIP verdict. Use when testing a deployed feature on staging or preview, before shipping frontend changes, reviewing a frontend PR, or checking responsive layout and accessibility.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/bun-runtime",
+      "name": "bun-runtime",
+      "description": "Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/change-impact",
+      "name": "change-impact",
+      "description": "Perform evidence-backed impact analysis before changing code, data, interfaces, or governance documents, then compare the planned impact with the actual diff after implementation. Covers call paths, data and schema, API contracts, tests, documentation, ADRs, deployment, migration, and rollback. Use for cross-module or high-risk changes, database migrations, authentication, public interfaces, blast-radius questions, pre-change checks, and post-implementation alignment.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/ck",
+      "name": "ck",
+      "description": "Persistent per-project memory for Claude Code (Context Keeper) driven by deterministic Node.js /ck commands: init, save, resume, info, list, forget, and v1-to-v2 migrate, plus a SessionStart hook that injects a compact project brief. Use when context must survive across sessions, saving session state with next steps and decisions, resuming where a previous session left off, or picking up a project without re-explaining it.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/click-path-audit",
+      "name": "click-path-audit",
+      "description": "Trace every user-facing button/touchpoint through its full state change sequence to find bugs where functions individually work but cancel each other out, produce wrong final state, or leave the UI in an inconsistent state. Use when: systematic debugging found no bugs but users report broken buttons, or after any major refactor touching shared state stores.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/code-tour",
+      "name": "code-tour",
+      "description": "Create CodeTour `.tour` files — persona-targeted, step-by-step walkthroughs with real file and line anchors. Use for onboarding tours, architecture walkthroughs, PR tours, RCA tours, and structured \"explain how this works\" requests. Use when the user asks for a code tour, onboarding walkthrough, PR tour, or an explanation of how a subsystem works.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/codebase-onboarding",
+      "name": "codebase-onboarding",
+      "description": "Analyze an unfamiliar codebase and generate a structured onboarding guide with architecture map, key entry points, conventions, and a starter CLAUDE.md. Use when joining a new project or setting up Claude Code for the first time in a repo.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/codehealth-mcp",
+      "name": "codehealth-mcp",
+      "description": "Real-time structural Code Health via CodeScene MCP — review before edits, verify score deltas after changes, gate commits and PRs. Use when reviewing code quality, refactoring, checking if AI changes degraded a file, or before commit/PR.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/coding-standards",
+      "name": "coding-standards",
+      "description": "Baseline cross-project coding conventions for naming, readability, immutability, and code-quality review. Use detailed frontend or backend skills for framework-specific patterns. Use when reviewing code quality or naming with no framework-specific skill that applies.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/competitive-platform-analysis",
+      "name": "competitive-platform-analysis",
+      "description": "Use when scoping a competitive landscape — identifying, categorising, and score-filtering a competitor set before any benchmarking begins. Decides who counts as a competitor, which tier they belong to, and which sources to mine. First step in the three-skill competitive pipeline; precedes benchmark-methodology.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/competitive-report-structure",
+      "name": "competitive-report-structure",
+      "description": "Use after benchmark-methodology has produced scored competitor profile cards. Assembles findings into a decision-grade report: landscape map, competitor profiles, benchmarking matrix, white-space analysis, strategic recommendations, and team alignment trigger questions. Final step in the three-skill competitive pipeline.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/config-gc",
+      "name": "config-gc",
+      "description": "Garbage collection for your Claude Code configuration. Periodically scans ~/.claude (skills, memory, hooks, permissions, MCP servers, caches) for redundant, stale, orphaned, or low-value items, then walks the user through a confirm-each-deletion cleanup. Use when the user says \"clean up my config\", \"config GC\", \"too many skills\", \"audit my setup\", \"my .claude is bloated\", or asks for a periodic config review.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/configure-ecc",
+      "name": "configure-ecc",
+      "description": "Run the conversational ECC setup wizard inside the current harness: inventory the install, collect scope (user/project/local) and hook mode (off/minimal/standard/strict) in Claude Code, use Codex's native plugin lifecycle, or install the project surface under ./.kimi-code, then preview, apply, and verify. Use when installing, updating, reconfiguring, or repairing an ECC installation, changing hook profiles, or moving ECC between install scopes.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/content-engine",
+      "name": "content-engine",
+      "description": "Create platform-native content systems for X, LinkedIn, TikTok, YouTube, newsletters, and repurposed multi-platform campaigns. Use when the user wants social posts, threads, scripts, content calendars, or one source asset adapted cleanly across platforms.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/context-and-decisions",
+      "name": "context-and-decisions",
+      "description": "Govern stable domain context with a narrowly scoped CONTEXT.md when needed, and route hard-to-reverse decisions to ECC's existing architecture-decision-records skill. Use when domain terms require repeated explanation, one term has multiple meanings, unclear language causes module-boundary mistakes, or domain semantics must remain separate from architecture decisions.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/context-budget",
+      "name": "context-budget",
+      "description": "Routes live context checks to the native Codex or Claude Code meter without scanning files, and performs a bounded static component audit only when explicitly requested. Use for context-budget requests about remaining capacity or installed context overhead.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/continuous-learning",
+      "name": "continuous-learning",
+      "description": "[DEPRECATED - use continuous-learning-v2] Legacy v1 stop-hook skill extractor. v2 is a strict superset with instinct-based, project-scoped, hook-reliable learning. Do not invoke v1: when continuous learning, session learning, or pattern extraction is requested, route to continuous-learning-v2 instead.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/continuous-learning-v2",
+      "name": "continuous-learning-v2",
+      "description": "Instinct-based learning system that observes sessions via hooks, creates atomic instincts with confidence scoring, and evolves them into skills/commands/agents. v2.1 adds project-scoped instincts to prevent cross-project contamination. Use when capturing lessons from a session, managing instincts, or promoting them into skills, commands, or agents.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/conventional-commit-review",
+      "name": "conventional-commit-review",
+      "description": "Reviews staged changes and drafts a Conventional Commits-compliant commit message with the right type, scope, and length. Use before committing, or when the user asks to write, fix, or review a commit message.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/council",
+      "name": "council",
+      "description": "Convene a four-voice council for ambiguous decisions, tradeoffs, and go/no-go calls. Use when multiple valid paths exist and you need structured disagreement before choosing.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/council-multi-model",
+      "name": "council-multi-model",
+      "description": "Add one optional external Codex critique after the existing council has produced a decision draft. Use when an ambiguous, high-consequence decision would benefit from a separate model invocation's attempt to break the synthesis. Requires explicit consent before sending the compact draft and disagreement to OpenAI, labels same-provider reviews honestly, and marks the review absent when the adapter is unavailable.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/crosspost",
+      "name": "crosspost",
+      "description": "Multi-platform content distribution across X, LinkedIn, Threads, and Bluesky. Adapts content per platform using content-engine patterns. Never posts identical content cross-platform. Use when the user wants to distribute content across social platforms.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/deep-research",
+      "name": "deep-research",
+      "description": "Multi-source deep research using firecrawl and exa MCPs. Searches the web, synthesizes findings, and delivers cited reports with source attribution. Use when the user wants thorough research on any topic with evidence and citations.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/deepseek-harness-setup",
+      "name": "deepseek-harness-setup",
+      "description": "Install and operate Everything Claude Code (ECC) on the DeepSeek Harness (DSH): native skill roots (~/.dsh/skills, .agents/skills), the @deepseek-ai/dsh-hooks-claude-code bridge for command hooks, bare-insert patch mounting, generator usage, event-support limits, and update workflow. Use when setting up ECC on DeepSeek Harness, wiring ECC hooks into a DSH profile, or debugging why ECC skills or hooks do not appear in a DSH session.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/delivery-gate",
+      "name": "delivery-gate",
+      "description": "Stop hook that blocks Claude from finishing until quality checks pass. Detects rationalization patterns (surface text heuristics), stale learning logs (filesystem mtime), and low disk space. Complements self-audit by mechanically enforcing learning capture habits. Use when Claude should be mechanically blocked from declaring work finished before quality checks and learning capture actually pass.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/dev-team",
+      "name": "dev-team",
+      "description": "Simulate a collaborative dev team session where multiple role-based personas (PM, Architect, Developer, QA) respond to the same problem together in one session. Use when designing a feature, reviewing a proposal, or onboarding a new initiative and you want multi-role perspective without switching agents manually.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/dmux-workflows",
+      "name": "dmux-workflows",
+      "description": "Multi-agent orchestration using dmux (tmux pane manager for AI agents). Patterns for parallel agent workflows across Claude Code, Codex, OpenCode, and other harnesses. Use when running multiple agent sessions in parallel or coordinating multi-agent development workflows.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/docs-governance",
+      "name": "docs-governance",
+      "description": "Route broad documentation-governance requests to existing ECC skills and run an opt-in, read-only audit of mapped documentation roles, links, ADR indexes, and evidence references. Use when a user asks for documentation governance, project-knowledge organization, documentation integrity, or a deterministic docs audit without naming a narrower skill.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/documentation-lookup",
+      "name": "documentation-lookup",
+      "description": "Use up-to-date library and framework docs via Context7 MCP instead of training data. Activates for setup questions, API references, code examples, or when the user names a framework (e.g. React, Next.js, Prisma).",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/e2e-testing",
+      "name": "e2e-testing",
+      "description": "Playwright E2E testing patterns, Page Object Model, configuration, CI/CD integration, artifact management, and flaky test strategies. Use when writing Playwright tests, structuring page objects, or fixing flaky E2E runs in CI.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/ecc-conventions",
+      "name": "ecc-conventions",
+      "description": "Development conventions and patterns for ECC. JavaScript project with conventional commits.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/ecc-guide",
+      "name": "ecc-guide",
+      "description": "Answer questions about ECC by reading the live repo surface — agents, skills, commands, hooks, rules, install profiles, and docs — instead of memory. Use when the user asks what ECC includes, how to install or reset it, which skill or command fits a task, or how project onboarding works.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/ecc-recipes",
+      "name": "ecc-recipes",
+      "description": "Map a described workflow to the right ECC command group with run-order and stop condition, or browse all command-group recipe families read live from the commands directory. Advisory only — never executes. Use when asked which commands run a workflow, the command sequence for a task, or to list ECC pipelines; not for executing the task (route to the command itself), single-command docs (use ecc-guide), or prompt rewrites (use prompt-optimizer).",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/error-handling",
+      "name": "error-handling",
+      "description": "Patterns for robust error handling across TypeScript, Python, and Go. Covers typed errors, error boundaries, retries, circuit breakers, and user-facing error messages. Use when designing error types, retries, circuit breakers, or user-facing failure messages in TypeScript, Python, or Go.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/eval-harness",
+      "name": "eval-harness",
+      "description": "Eval-driven development (EDD) framework for AI coding sessions — define capability and regression evals before coding, grade with code-based, model-based, rule, or human graders, and track pass@k and pass^k reliability. Use when defining pass/fail criteria for agent tasks, measuring agent reliability, building regression suites for prompt or agent changes, or benchmarking across model versions.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/exa-search",
+      "name": "exa-search",
+      "description": "Neural search via Exa MCP for web, code, and company research. Use when the user needs web search, code examples, company intel, people lookup, or AI-powered deep research with Exa's neural search engine.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/fal-ai-media",
+      "name": "fal-ai-media",
+      "description": "Unified media generation via fal.ai MCP — image, video, and audio. Covers text-to-image (Nano Banana), text/image-to-video (Seedance, Kling, Veo 3), text-to-speech (CSM-1B), and video-to-audio (ThinkSound). Use when the user wants to generate images, videos, or audio with AI.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/frontend-patterns",
+      "name": "frontend-patterns",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices. Use when building or reviewing React or Next.js components, state, or render performance.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/frontend-slides",
+      "name": "frontend-slides",
+      "description": "Create stunning, animation-rich HTML presentations from scratch or by converting PowerPoint files. Use when the user wants to build a presentation, convert a PPT/PPTX to web, or create slides for a talk/pitch. Helps non-designers discover their aesthetic through visual exploration rather than abstract choices.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/git-workflow",
+      "name": "git-workflow",
+      "description": "Git workflow patterns including branching strategies, commit conventions, keeping history clean and readable, tidying local commits before merging, merge vs rebase, conflict resolution, and collaborative development best practices for teams of all sizes. Use when choosing a branching strategy, writing commit conventions, cleaning up history before a pull request, deciding merge versus rebase, or resolving conflicts.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/growth-log",
+      "name": "growth-log",
+      "description": "Write growth log entries that extract reusable patterns from completed work — root cause, transferable rule, and a recognizable signal — instead of diary-style event narration, with a 4-8 sentence template and merge-duplicates discipline. Use when capturing what was learned after a complex task, debugging session, failure, or rollback, when reviewing progress over a period, or when a delivery gate asks what was learned.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/hookify-rules",
+      "name": "hookify-rules",
+      "description": "Create and configure hookify rules — markdown files with YAML frontmatter that match bash, file, prompt, or stop events by regex or conditions and show warn/block messages to the agent. Use when creating a hookify rule, writing hook rule syntax, configuring hookify, or adding pattern guardrails such as blocking dangerous commands, .env edits, or debug code.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/inherit-legacy-style",
+      "name": "inherit-legacy-style",
+      "description": "Prevent AI style drift on legacy projects by scanning the codebase for implicit conventions, resolving conflicts with the operator one at a time, and writing an enforceable .ai-style-rules.md (Golden Files, naming rules, DONTs) plus an optional CLAUDE.md hook. Use when onboarding an AI agent onto a hand-written legacy codebase or extracting a project's unwritten coding rules.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/intent-driven-development",
+      "name": "intent-driven-development",
+      "description": "Turn ambiguous or high-impact product and engineering changes into scoped, verifiable acceptance criteria before or alongside implementation. Use when a user asks to clarify a feature, define acceptance criteria, de-risk a security/data/migration/integration change, prepare implementation requirements for another agent, or make a complex request testable. Do not trigger for trivial edits, straightforward fixes, active debugging, code review, or implementation requests whose acceptance conditions are already clear unless the user explicitly invokes this skill.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/investor-materials",
+      "name": "investor-materials",
+      "description": "Create and update pitch decks, one-pagers, investor memos, accelerator applications, financial models, and fundraising materials. Use when the user needs investor-facing documents, projections, use-of-funds tables, milestone plans, or materials that must stay internally consistent across multiple fundraising assets.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/investor-outreach",
+      "name": "investor-outreach",
+      "description": "Draft cold emails, warm intro blurbs, follow-ups, update emails, and investor communications for fundraising. Use when the user wants outreach to angels, VCs, strategic investors, or accelerators and needs concise, personalized, investor-facing messaging.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/iterative-retrieval",
+      "name": "iterative-retrieval",
+      "description": "Pattern for progressively refining context retrieval to solve the subagent context problem. Use when a subagent lacks the context it needs and retrieval must be refined across passes.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/living-docs-governance",
+      "name": "living-docs-governance",
+      "description": "Keep a long-lived project's documentation from rotting by assigning existing project docs clear constitution, map, status, and history roles, then wiring the active agent harness to those canonical sources. Use in the maintain phase when docs drift from code, agents lose context between sessions, or intentional removals keep being recreated. Prefer adopting the repository's current docs structure over creating new root files. 中文触发：文档治理、活文档、项目状态追踪、防文档漂移、项目地图、健康仪表盘、删除区、长期项目治理",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/loop-design-check",
+      "name": "loop-design-check",
+      "description": "Design a goal-oriented agent loop or review one for failure modes: spinning, Goodhart-gaming the verifier, or running a wrong answer to completion. Covers machine-decidable goals, loop types, plan/build/judge skeletons, and runaway prevention; mechanism wiring lives in autonomous-loops. Use when designing, writing, or checking an agent loop. 中文触发：写 loop、设计 loop、做一个 loop、检查 loop 对不对、loop 体检、loop 会不会跑飞、可判定目标、五个崩法、plan build judge。",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/market-research",
+      "name": "market-research",
+      "description": "Conduct market research, competitive analysis, investor due diligence, and industry intelligence with source attribution and decision-oriented summaries. Use when the user wants market sizing, competitor comparisons, fund research, technology scans, or research that informs business decisions.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/mcp-dependency-review",
+      "name": "mcp-dependency-review",
+      "description": "Statically review MCP configuration for mutable package references before approval or CI, without executing discovered MCP servers.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/mcp-server-patterns",
+      "name": "mcp-server-patterns",
+      "description": "Build MCP servers with Node/TypeScript SDK — tools, resources, prompts, Zod validation, stdio vs Streamable HTTP. Use Context7 or official MCP docs for latest API.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/mle-workflow",
+      "name": "mle-workflow",
+      "description": "Production machine-learning engineering workflow for data contracts, reproducible training, model evaluation, deployment, monitoring, and rollback. Use when building, reviewing, or hardening ML systems beyond one-off notebooks.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/module-regression",
+      "name": "module-regression",
+      "description": "Govern cross-module regression in large repositories with a REGRESSION.md ledger that records each module's downstream consumers and executable acceptance command. After a change, run the changed module and every affected downstream command, and use observed exit codes as regression evidence under the project's delivery policy. Use for module regression, regression ledgers, impact audits, downstream verification, and changes where modifying A may break B.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/nextjs-turbopack",
+      "name": "nextjs-turbopack",
+      "description": "Next.js 16+ and Turbopack — incremental bundling, FS caching, dev speed, and when to use Turbopack vs webpack.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/plan-canvas",
+      "name": "plan-canvas",
+      "description": "Open plans and HTML artifacts in a local browser canvas where the human annotates elements, chats, and approves or requests changes without leaving the page. Use when presenting a plan for review, or when feedback like \"move this, change that\" is easier pointed at than typed.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/plankton-code-quality",
+      "name": "plankton-code-quality",
+      "description": "Write-time code quality enforcement using Plankton — auto-formatting, linting, and Claude-powered fixes on every file edit via hooks. Use when setting up write-time formatting, linting, or auto-fix hooks on file edits.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/product-capability",
+      "name": "product-capability",
+      "description": "Translate PRD intent, roadmap asks, or product discussions into an implementation-ready capability plan that exposes constraints, invariants, interfaces, and unresolved decisions before multi-service work starts. Use when the user needs an ECC-native PRD-to-SRS lane instead of vague planning prose.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/product-lens",
+      "name": "product-lens",
+      "description": "Validate the why before building through four product diagnostics — a YC-style product diagnostic that produces PRODUCT-BRIEF.md with a go/no-go recommendation, a founder review scoring product-market-fit signals, a user journey audit measuring time-to-value, and ICE feature prioritization. Use when pressure-testing product direction, choosing between features, sanity-checking a launch, or converting a vague idea into a product brief.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/production-audit",
+      "name": "production-audit",
+      "description": "Local-evidence production readiness audit for shipped apps, pre-launch reviews, post-merge checks, and \"what breaks in prod?\" questions without sending repo data to an external audit service. Use when auditing production readiness before launch, after a merge, or when asked what breaks in prod.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/repo-scan",
+      "name": "repo-scan",
+      "description": "Bootstrap pointer that installs the external repo-scan skill from a pinned, reviewable commit. Use when repo-scan must be installed before running its cross-stack source-code asset audit; this ECC pointer does not perform the audit itself.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/rules-distill",
+      "name": "rules-distill",
+      "description": "Scan skills to extract cross-cutting principles and distill them into rules — append, revise, or create new rule files. Use when the same principle keeps recurring across skills and belongs in a rule file instead.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/santa-method",
+      "name": "santa-method",
+      "description": "Multi-agent adversarial verification: two independent reviewers with the same rubric must both pass before output ships, with a fix-and-re-review convergence loop and human escalation cap. Use when gating publishing, production deploys, compliance or brand-sensitive content, or hallucination-prone claims before they ship.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/security-review",
+      "name": "security-review",
+      "description": "Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive features. Provides comprehensive security checklist and patterns.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/skill-comply",
+      "name": "skill-comply",
+      "description": "Visualize whether skills, rules, and agent definitions are actually followed — auto-generates scenarios at 3 prompt strictness levels, runs agents, classifies behavioral sequences, and reports compliance rates with full tool call timelines. Use when checking whether agents actually follow the skills, rules, and definitions they were given, rather than assuming they do.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/skill-host-compat",
+      "name": "skill-host-compat",
+      "description": "Lint ECC skills for Codex/Cursor-safe frontmatter and Claude-only substitutions before a skill PR.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/skill-scout",
+      "name": "skill-scout",
+      "description": "Search existing local, marketplace, GitHub, and web skill sources before creating a new skill. Use when the user wants to create, build, fork, or find a skill for a workflow.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/skill-stocktake",
+      "name": "skill-stocktake",
+      "description": "Use when auditing Claude skills and commands for quality. Supports Quick Scan (changed skills only) and Full Stocktake modes with sequential subagent batch evaluation.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/story-lifecycle",
+      "name": "story-lifecycle",
+      "description": "Manage a file-based epic → story → sprint development loop without requiring an external project management tool. Creates and tracks epics, breaks them into user stories, assigns them to sprints, and drives implementation story by story. Use when starting a new feature initiative or when the team has no Jira/Linear/Taiga but needs structured delivery tracking.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/strategic-compact",
+      "name": "strategic-compact",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. Use when a session is approaching a context limit and a task phase is a natural place to compact.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/tdd-workflow",
+      "name": "tdd-workflow",
+      "description": "Test-driven development workflow: write a failing test first, watch it fail, implement the smallest change to green, then refactor with 80%+ coverage across unit, integration, and E2E tests. Use when writing a new feature, fixing a bug, refactoring, or when told to write failing tests first.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/test-collaboration",
+      "name": "test-collaboration",
+      "description": "Inventory and govern a project's test assets. Connect requirements, business rules, risks, bugs, and cross-boundary contracts to stable TEST-IDs and executable evidence in the repository's existing test registry or TESTS.md. Use for test inventory, test gap analysis, unit/integration/contract/E2E/smoke classification, bug-to-test regression protection, consumer/provider contract testing, test-necessity review, and pre-delivery evidence review.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/unified-memory",
+      "name": "unified-memory",
+      "description": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save work state, transfer context, resume another agent's task, or search shared project knowledge.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/verification-loop",
+      "name": "verification-loop",
+      "description": "Run a six-phase verification of a Claude Code session's work — build, type check, lint, tests with coverage, security grep, and diff review — then produce a PASS/FAIL verification report. Use when verifying work after completing a feature or refactor, before creating a PR, or when quality gates must pass.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/video-editing",
+      "name": "video-editing",
+      "description": "AI-assisted video editing workflows for cutting, structuring, and augmenting real footage. Covers the full pipeline from raw capture through FFmpeg, Remotion, ElevenLabs, fal.ai, and final polish in Descript or CapCut. Use when the user wants to edit video, cut footage, create vlogs, or build video content.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/windows-desktop-e2e",
+      "name": "windows-desktop-e2e",
+      "description": "E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation. Use when writing E2E tests for a Windows native desktop app with pywinauto or UI Automation.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ecc/x-api",
+      "name": "x-api",
+      "description": "X/Twitter API integration for posting tweets, threads, reading timelines, search, and analytics. Covers OAuth auth patterns, rate limits, and platform-native content posting. Use when the user wants to interact with X programmatically.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "frontend-design",
+      "name": "frontend-design",
+      "description": "Guidance for distinctive, intentional visual design. Use for anti-template craft: opinionated palette, typography, layout, and motion choices grounded in the product subject. When a project design system exists, defer brand tokens and product purpose to it — keep craft and structure from this skill.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "knowledge-memory-gen",
+      "name": "knowledge-memory-gen",
+      "description": "Generate and maintain a comprehensive knowledge memory documentation set for any software project. Automatically triggered when significant codebase changes occur (new features, architectural shifts, dependency updates, refactors) or when onboarding context is needed. Use when the codebase structure changes, new features are added, dependencies are updated, conventions shift, or the user asks for project documentation, onboarding docs, or knowledge capture.",
+      "remote": "https://github.com/paul-mbou/knowledge-memory-gen.git"
+    },
+    {
+      "group": "cursor",
+      "path": "payment-gateway",
+      "name": "payment-gateway",
+      "description": "Provider-agnostic PaymentGateway port so checkout, orders, and UI never couple to a PSP. Use when implementing, swapping, or adding any payment provider (Payunit, Stripe, IAP, Mobile Money), or when the user mentions payment adapter, passerelle de paiement, or changer de moyen de paiement.",
+      "remote": "https://github.com/paul-mbou/payment-gateway.git"
+    },
+    {
+      "group": "cursor",
+      "path": "payunit-integration",
+      "name": "payunit-integration",
+      "description": "Integrates Payunit as a PaymentGateway adapter (Mobile Money, cards, hosted checkout) so the app can switch PSPs without rewriting checkout. Always scans architecture first. Use when the user mentions Payunit, flutter_payunit, @payunit/nodejs-sdk, gateway.payunit.net, mobile money, XAF payments, or payment webhooks.",
+      "remote": "https://github.com/paul-mbou/payunit-integration.git"
+    },
+    {
+      "group": "cursor",
+      "path": "true-ui-redesign",
+      "name": "true-ui-redesign",
+      "description": "Expert app-designer redesigns that change layout disposition and feeling—not restyles. Enforces local design-system colors (pleasant tonal hierarchy, never a new palette). Use when the user asks to redesign, relooker, or refaire le design of a page, screen, flow, or app; when color “adjustment” looks harsh or off-brand; when a previous redesign felt like the same layout with new paint; or when composing a mobile/web screen inspired by popular apps.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "typeui-fundamentals",
+      "name": "typeui-fundamentals",
+      "description": "Universal UI/UX design principles covering visual hierarchy, interaction laws, typography foundations, and WCAG accessibility requirements. Use when making design decisions not covered by a specific design system, validating principle compliance, or resolving conflicts between aesthetics and accessibility. Design-system-agnostic and applies to every surface.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ui-design",
+      "name": "ui-design",
+      "description": "Design, build, or improve web and mobile interfaces using real product examples from UIZZE’s 500,000+ web and iOS screens. Use for UI design, UX design, frontend or web design, mobile app UI, responsive layouts, design systems, redesigns, visual polish, interface critique, and requests like “make this UI better.”",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ui-design-brain",
+      "name": "ui-design-brain",
+      "description": "Generate production-grade UI using real component patterns from 60+ documented interface components. Use for layout anatomy (chat, sheets, lists, forms). When a project design system exists, defer brand/palette/product purpose to it and restyle output to that project's tokens.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ui-design-director",
+      "name": "ui-design-director",
+      "description": "Smart creative-director orchestrator for award-caliber, unique, beautiful UI. Wisely casts design skills and agents (frontend-design, ui-ux-pro-max, ui-design-brain, typeui-fundamentals, anti-ui-slop, ui-design, ui-radar, project design systems, optional Figma) — never a blind playlist. Produces purposeful full-screen / front-view designs for project handoff: every element serves interaction and satisfaction. Invents dual light/dark MASTER systems with senior first impressions; plain language for engineers. Use for design, redesign, brand, theme, screens, landing pages, dashboards, Flutter/React/web, “surprise me”, polish, handoff, or registering UI skills.",
+      "remote": "https://github.com/Endeavor068/ui-design-director.git"
+    },
+    {
+      "group": "cursor",
+      "path": "ui-radar",
+      "name": "ui-radar",
+      "description": "Find and compare real UI examples from UIZZE’s 500,000+ web and iOS screens. Use for UI inspiration, UI research, design references, comparable apps, user flows, layouts, navigation, components, interaction states, and product patterns before designing or redesigning an interface.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "ui-ux-pro-max",
+      "name": "ui-ux-pro-max",
+      "description": "Comprehensive design guide (styles, palettes, UX guidelines, Flutter stack). When a project design system exists, use for UX/a11y/structure only — brand, product purpose, colors, and typography from the project system must win on conflict.",
+      "remote": ""
+    },
+    {
+      "group": "cursor",
+      "path": "weekly-features-recap",
+      "name": "weekly-features-recap",
+      "description": "Produces human-friendly weekly project recaps for PMs and non-developers from git history and Cursor transcripts. Outputs Recap, Standup, and Changelog in plain language. Use when the user asks for weekly recap, sprint summary, what we shipped, standup, changelog, bilan hebdomadaire, or résumé de la semaine.",
+      "remote": "https://github.com/paul-mbou/weekly-features-recap.git"
+    },
+    {
+      "group": "cursor-builtin",
+      "path": ".kits/cursor-pages/canvas",
+      "name": "canvas",
+      "description": "A Cursor Canvas is a live React app that the user can open beside the chat. You MUST use a canvas when the agent produces a standalone analytical artifact — quantitative analyses, billing investigations, security audits, architecture reviews, data-heavy content, timelines, charts, tables, interactive explorations, repeatable tools, or any response that benefits from visual layout. Especially prefer a canvas when presenting results from MCP tools (Datadog, Databricks, Linear, Sentry, Slack, etc.) where the data is the deliverable — render it in a rich canvas rather than dumping it into a markdown table or code block. If you catch yourself about to write a markdown table, stop and use a canvas instead. You MUST also read this skill whenever you create, edit, or debug any .canvas.tsx file.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "agent-sdk-create-agent",
+      "name": "agent-sdk-create-agent",
+      "description": "Scaffold a new Agent SDK agent: short AskQuestion interview, then verify a turn and hand off to hillclimb. Use to build or create a new bot or agent with the agent-sdk, the Agent SDK, `@grok/agent-sdk`, or BDK. Ask only what the invoking message left open.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "automate",
+      "name": "automate",
+      "description": "Use this skill to create Cursor Automations.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "autopilot",
+      "name": "autopilot",
+      "description": "Keep a PR merge-ready by triaging comments, resolving clear conflicts, and fixing CI in a loop.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "canvas",
+      "name": "canvas",
+      "description": "A Cursor Canvas is a live React app that the user can open beside the chat. You MUST use a canvas when the agent produces a standalone analytical artifact — quantitative analyses, billing investigations, security audits, architecture reviews, data-heavy content, timelines, charts, tables, interactive explorations, repeatable tools, or any response that benefits from visual layout. Especially prefer a canvas when presenting results from MCP tools (Datadog, Databricks, Linear, Sentry, Slack, etc.) where the data is the deliverable — render it in a rich canvas rather than dumping it into a markdown table or code block. If you catch yourself about to write a markdown table, stop and use a canvas instead. You MUST also read this skill whenever you create, edit, or debug any .canvas.tsx file.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "create-hook",
+      "name": "create-hook",
+      "description": "Create Cursor hooks. Use when you want to create a hook, write hooks.json, add hook scripts, or automate behavior around agent events.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "create-rule",
+      "name": "create-rule",
+      "description": "Create Cursor rules for persistent AI guidance. Use when you want to create a rule, add coding standards, set up project conventions, configure file-specific patterns, create RULE.md files, or asks about .cursor/rules/ or AGENTS.md.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "create-skill",
+      "name": "create-skill",
+      "description": "Create Cursor Agent Skills. Use when authoring a new skill or asking about SKILL.md structure.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "create-subagent",
+      "name": "create-subagent",
+      "description": "Create custom subagents for specialized AI tasks. Use when you want to create a new type of subagent, set up task-specific agents, configure code reviewers, debuggers, or domain-specific assistants with custom prompts.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "goal",
+      "name": "goal",
+      "description": "Set a goal that Cursor will pursue to completion.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "loop",
+      "name": "loop",
+      "description": "Run a prompt or skill in this session on a recurring or variable interval (e.g. /loop 5m /foo).",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "migrate-to-skills",
+      "name": "migrate-to-skills",
+      "description": "Convert 'Applied intelligently' Cursor rules (.cursor/rules/*.mdc) and slash commands (.cursor/commands/*.md) to Agent Skills format (.cursor/skills/). Use when you want to migrate rules or commands to skills, convert .mdc rules to SKILL.md format, or consolidate commands into the skills directory.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "new-repo",
+      "name": "new-repo",
+      "description": "Create a Cursor-hosted repo for the current project and push it. Use when a project has no git remote yet and the user asks to create a repo on Cursor, push the project to Cursor, or set up a Cursor-hosted remote; installs and signs in the origin CLI when needed.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "onboard",
+      "name": "onboard",
+      "description": "Use /onboard for a focused Cursor onboarding flow that learns basic preferences, picks a first goal, and routes the user to the right next action.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "origin",
+      "name": "origin",
+      "description": "Install, sign in, update, or repair the origin CLI for repos hosted on Cursor (origin.cursor.com). Use when the CLI is missing or outdated, git push/pull fails to authenticate against origin.cursor.com, or the user asks to set up, clone, or configure Cursor-hosted repos.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "rename-chat",
+      "name": "rename-chat",
+      "description": "Rename the current chat to match its focus. Use only when the user invokes /rename-chat. Optional text after the command steers the title.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "review",
+      "name": "review",
+      "description": "Review code changes with the Bugbot or Security Review subagent.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "review-bugbot",
+      "name": "review-bugbot",
+      "description": "Review code changes with Bugbot subagent.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "review-security",
+      "name": "review-security",
+      "description": "Review code changes with Security Review subagent.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "sdk",
+      "name": "sdk",
+      "description": "Guide users building apps, scripts, CI pipelines, or automations on top of the Cursor SDK - TypeScript (`@cursor/sdk`) or Python (`cursor-sdk` / `cursor_sdk`). Use when the user mentions integrating, installing, or writing code against the Cursor SDK; says `Agent.create`, `Agent.prompt`, `Agent.resume`, `agent.send`, `agent.summarize`, `run.stream`, `run.messages`, `SDKSummaryMessage`, `CursorAgentError`, `@cursor/sdk`, `cursor-sdk`, or `cursor_sdk`; asks to run Cursor agents programmatically from a script, CI/CD pipeline, GitHub Action, backend service, or other code outside the Cursor IDE; wants to pick between local and cloud runtime, configure MCP servers for an SDK agent, handle streaming, cancellation, or errors, or keep a long conversation within the context window; or is wiring Cursor into an automation, bot, or REST `/v1/agents` migration. Use eagerly rather than answering from memory; the SDK surface evolves and this skill is the source of truth for the external packages.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "share",
+      "name": "share",
+      "description": "Save, back up, or share the current project on Cursor — creates a repo (a saved, versioned copy that isn't public) even for users who have never used git, handling all setup automatically. Use when the user asks to save, back up, publish, or share their project on Cursor, or how to not lose it.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "shell",
+      "name": "shell",
+      "description": "Runs the rest of a /shell request as a literal shell command. Use only when the user explicitly invokes /shell and wants the following text executed directly in the terminal.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "split-to-prs",
+      "name": "split-to-prs",
+      "description": "Split current work into small reviewable PRs. Use when the user asks to split a chat, set of changes, branch, or PR.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "statusline",
+      "name": "statusline",
+      "description": "Configure a custom status line in the CLI. Use when the user mentions status line, statusline, statusLine, CLI status bar, prompt footer customization, or wants to add session context above the prompt.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "update-cli-config",
+      "name": "update-cli-config",
+      "description": "View and modify Cursor CLI configuration settings in ~/.cursor/cli-config.json. Use when the user wants to change CLI settings, configure permissions, switch approval mode, enable vim mode, toggle display options, configure sandbox, or manage any CLI preferences.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "update-cursor-settings",
+      "name": "update-cursor-settings",
+      "description": "Modify Cursor/VSCode user settings in settings.json. Use when you want to change editor settings, preferences, configuration, themes, font size, tab size, format on save, auto save, keybindings, or any settings.json values.",
+      "remote": ""
+    },
+    {
+      "group": "cursor-builtin",
+      "path": "visualize",
+      "name": "visualize",
+      "description": "Use /visualize for creating compact charts, diagrams, or other visuals inline as part of the conversation itself. It chooses among Markdown tables, Mermaid, inline HTML, and other supported in-transcript forms. Use Canvas for durable artifacts outside the transcript that users may revisit, refine, or share. You MUST read this skill whenever you create, edit, update, or show the user an in-conversation visualization, including one another agent made.",
+      "remote": ""
+    },
+    {
+      "group": "claude",
+      "path": "gepeto",
+      "name": "gepeto",
+      "description": "Guide for building 1-click launchers and building apps with launchers built-in using Pinokio",
+      "remote": ""
+    },
+    {
+      "group": "claude",
+      "path": "pinokio",
+      "name": "pinokio",
+      "description": "Discover, launch, and use apps and tools for the current task.",
+      "remote": ""
+    },
+    {
+      "group": "agents",
+      "path": "gepeto",
+      "name": "gepeto",
+      "description": "Guide for building 1-click launchers and building apps with launchers built-in using Pinokio",
+      "remote": ""
+    },
+    {
+      "group": "agents",
+      "path": "pinokio",
+      "name": "pinokio",
+      "description": "Discover, launch, and use apps and tools for the current task.",
+      "remote": ""
+    },
+    {
+      "group": "agents",
+      "path": "riverpod-3-migration",
+      "name": "riverpod-3-migration",
+      "description": "Migrate legacy Flutter Riverpod code to Riverpod 3.x.x safely, including API audits, old-to-new provider patterns, ref usage cleanup, validation steps, and incremental migration guidance for existing apps.",
+      "remote": ""
+    },
+    {
+      "group": "agent-store",
+      "path": "/Users/joetech/Library/Application Support/Cursor/AgentStores/cursor_agent_stores/u452313559/files/skills/true-ui-redesign",
+      "name": "true-ui-redesign",
+      "description": "Expert app-designer redesigns that change layout disposition and feeling—not restyles. Enforces local design-system colors (pleasant tonal hierarchy, never a new palette). Use when the user asks to redesign, relooker, or refaire le design of a page, screen, flow, or app; when color “adjustment” looks harsh or off-brand; when a previous redesign felt like the same layout with new paint; or when composing a mobile/web screen inspired by popular apps.",
+      "remote": ""
+    }
+  ],
+  "rules": [
+    {
+      "file": "ai-context-compression.mdc",
+      "title": "AI context compression (global, default)",
+      "description": "Default smart routing — jCodeMunch for code discovery, Headroom for bulky payload compression",
+      "alwaysApply": "true",
+      "family": "ai",
+      "personal": true
+    },
+    {
+      "file": "angular-coding-style.mdc",
+      "title": "Angular Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "angular",
+      "personal": false
+    },
+    {
+      "file": "angular-hooks.mdc",
+      "title": "Angular Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "angular",
+      "personal": false
+    },
+    {
+      "file": "angular-patterns.mdc",
+      "title": "Angular Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "angular",
+      "personal": false
+    },
+    {
+      "file": "angular-security.mdc",
+      "title": "Angular Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "angular",
+      "personal": false
+    },
+    {
+      "file": "angular-testing.mdc",
+      "title": "Angular Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "angular",
+      "personal": false
+    },
+    {
+      "file": "arkts-coding-style.mdc",
+      "title": "HarmonyOS / ArkTS Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "arkts",
+      "personal": false
+    },
+    {
+      "file": "arkts-hooks.mdc",
+      "title": "HarmonyOS / ArkTS Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "arkts",
+      "personal": false
+    },
+    {
+      "file": "arkts-patterns.mdc",
+      "title": "HarmonyOS / ArkTS Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "arkts",
+      "personal": false
+    },
+    {
+      "file": "arkts-security.mdc",
+      "title": "HarmonyOS / ArkTS Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "arkts",
+      "personal": false
+    },
+    {
+      "file": "arkts-testing.mdc",
+      "title": "HarmonyOS / ArkTS Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "arkts",
+      "personal": false
+    },
+    {
+      "file": "common-agents.mdc",
+      "title": "Agent Orchestration",
+      "description": "Agent orchestration: available agents, parallel execution, multi-perspective analysis",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-code-review.mdc",
+      "title": "Code Review Standards",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-coding-style.mdc",
+      "title": "Coding Style",
+      "description": "ECC coding style: immutability, file organization, error handling, validation",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-development-workflow.mdc",
+      "title": "Development Workflow",
+      "description": "Development workflow: plan, TDD, review, commit pipeline",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-git-workflow.mdc",
+      "title": "Git Workflow",
+      "description": "Git workflow: conventional commits, PR process",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-hooks.mdc",
+      "title": "Hooks System",
+      "description": "Hooks system: types, auto-accept permissions, TodoWrite best practices",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-patterns.mdc",
+      "title": "Common Patterns",
+      "description": "Common patterns: repository, API response, skeleton projects",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-performance.mdc",
+      "title": "Performance Optimization",
+      "description": "Performance: model selection, context management, build troubleshooting",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-security.mdc",
+      "title": "Security Guidelines",
+      "description": "Security: mandatory checks, secret management, response protocol",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "common-testing.mdc",
+      "title": "Testing Requirements",
+      "description": "Testing requirements: 80% coverage, TDD workflow, test types",
+      "alwaysApply": "false",
+      "family": "common",
+      "personal": false
+    },
+    {
+      "file": "cpp-coding-style.mdc",
+      "title": "C++ Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "cpp",
+      "personal": false
+    },
+    {
+      "file": "cpp-hooks.mdc",
+      "title": "C++ Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "cpp",
+      "personal": false
+    },
+    {
+      "file": "cpp-patterns.mdc",
+      "title": "C++ Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "cpp",
+      "personal": false
+    },
+    {
+      "file": "cpp-security.mdc",
+      "title": "C++ Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "cpp",
+      "personal": false
+    },
+    {
+      "file": "cpp-testing.mdc",
+      "title": "C++ Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "cpp",
+      "personal": false
+    },
+    {
+      "file": "csharp-coding-style.mdc",
+      "title": "C# Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "csharp",
+      "personal": false
+    },
+    {
+      "file": "csharp-hooks.mdc",
+      "title": "C# Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "csharp",
+      "personal": false
+    },
+    {
+      "file": "csharp-patterns.mdc",
+      "title": "C# Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "csharp",
+      "personal": false
+    },
+    {
+      "file": "csharp-security.mdc",
+      "title": "C# Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "csharp",
+      "personal": false
+    },
+    {
+      "file": "csharp-testing.mdc",
+      "title": "C# Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "csharp",
+      "personal": false
+    },
+    {
+      "file": "dart-coding-style.mdc",
+      "title": "Dart/Flutter Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "dart",
+      "personal": false
+    },
+    {
+      "file": "dart-hooks.mdc",
+      "title": "Dart/Flutter Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "dart",
+      "personal": false
+    },
+    {
+      "file": "dart-patterns.mdc",
+      "title": "Dart/Flutter Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "dart",
+      "personal": false
+    },
+    {
+      "file": "dart-security.mdc",
+      "title": "Dart/Flutter Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "dart",
+      "personal": false
+    },
+    {
+      "file": "dart-testing.mdc",
+      "title": "Dart/Flutter Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "dart",
+      "personal": false
+    },
+    {
+      "file": "fsharp-coding-style.mdc",
+      "title": "F# Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "fsharp",
+      "personal": false
+    },
+    {
+      "file": "fsharp-hooks.mdc",
+      "title": "F# Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "fsharp",
+      "personal": false
+    },
+    {
+      "file": "fsharp-patterns.mdc",
+      "title": "F# Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "fsharp",
+      "personal": false
+    },
+    {
+      "file": "fsharp-security.mdc",
+      "title": "F# Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "fsharp",
+      "personal": false
+    },
+    {
+      "file": "fsharp-testing.mdc",
+      "title": "F# Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "fsharp",
+      "personal": false
+    },
+    {
+      "file": "golang-coding-style.mdc",
+      "title": "Go Coding Style",
+      "description": "Go coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "golang",
+      "personal": false
+    },
+    {
+      "file": "golang-hooks.mdc",
+      "title": "Go Hooks",
+      "description": "Go hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "golang",
+      "personal": false
+    },
+    {
+      "file": "golang-patterns.mdc",
+      "title": "Go Patterns",
+      "description": "Go patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "golang",
+      "personal": false
+    },
+    {
+      "file": "golang-security.mdc",
+      "title": "Go Security",
+      "description": "Go security extending common rules",
+      "alwaysApply": "false",
+      "family": "golang",
+      "personal": false
+    },
+    {
+      "file": "golang-testing.mdc",
+      "title": "Go Testing",
+      "description": "Go testing extending common rules",
+      "alwaysApply": "false",
+      "family": "golang",
+      "personal": false
+    },
+    {
+      "file": "java-coding-style.mdc",
+      "title": "Java Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "java",
+      "personal": false
+    },
+    {
+      "file": "java-hooks.mdc",
+      "title": "Java Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "java",
+      "personal": false
+    },
+    {
+      "file": "java-patterns.mdc",
+      "title": "Java Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "java",
+      "personal": false
+    },
+    {
+      "file": "java-security.mdc",
+      "title": "Java Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "java",
+      "personal": false
+    },
+    {
+      "file": "java-testing.mdc",
+      "title": "Java Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "java",
+      "personal": false
+    },
+    {
+      "file": "kotlin-coding-style.mdc",
+      "title": "Kotlin Coding Style",
+      "description": "Kotlin coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "kotlin",
+      "personal": false
+    },
+    {
+      "file": "kotlin-hooks.mdc",
+      "title": "Kotlin Hooks",
+      "description": "Kotlin hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "kotlin",
+      "personal": false
+    },
+    {
+      "file": "kotlin-patterns.mdc",
+      "title": "Kotlin Patterns",
+      "description": "Kotlin patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "kotlin",
+      "personal": false
+    },
+    {
+      "file": "kotlin-security.mdc",
+      "title": "Kotlin Security",
+      "description": "Kotlin security extending common rules",
+      "alwaysApply": "false",
+      "family": "kotlin",
+      "personal": false
+    },
+    {
+      "file": "kotlin-testing.mdc",
+      "title": "Kotlin Testing",
+      "description": "Kotlin testing extending common rules",
+      "alwaysApply": "false",
+      "family": "kotlin",
+      "personal": false
+    },
+    {
+      "file": "nuxt-coding-style.mdc",
+      "title": "Nuxt Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "nuxt",
+      "personal": false
+    },
+    {
+      "file": "nuxt-hooks.mdc",
+      "title": "Nuxt Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "nuxt",
+      "personal": false
+    },
+    {
+      "file": "nuxt-patterns.mdc",
+      "title": "Nuxt Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "nuxt",
+      "personal": false
+    },
+    {
+      "file": "nuxt-security.mdc",
+      "title": "Nuxt Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "nuxt",
+      "personal": false
+    },
+    {
+      "file": "nuxt-testing.mdc",
+      "title": "Nuxt Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "nuxt",
+      "personal": false
+    },
+    {
+      "file": "perl-coding-style.mdc",
+      "title": "Perl Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "perl",
+      "personal": false
+    },
+    {
+      "file": "perl-hooks.mdc",
+      "title": "Perl Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "perl",
+      "personal": false
+    },
+    {
+      "file": "perl-patterns.mdc",
+      "title": "Perl Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "perl",
+      "personal": false
+    },
+    {
+      "file": "perl-security.mdc",
+      "title": "Perl Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "perl",
+      "personal": false
+    },
+    {
+      "file": "perl-testing.mdc",
+      "title": "Perl Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "perl",
+      "personal": false
+    },
+    {
+      "file": "php-coding-style.mdc",
+      "title": "PHP Coding Style",
+      "description": "PHP coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "php",
+      "personal": false
+    },
+    {
+      "file": "php-hooks.mdc",
+      "title": "PHP Hooks",
+      "description": "PHP hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "php",
+      "personal": false
+    },
+    {
+      "file": "php-patterns.mdc",
+      "title": "PHP Patterns",
+      "description": "PHP patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "php",
+      "personal": false
+    },
+    {
+      "file": "php-security.mdc",
+      "title": "PHP Security",
+      "description": "PHP security extending common rules",
+      "alwaysApply": "false",
+      "family": "php",
+      "personal": false
+    },
+    {
+      "file": "php-testing.mdc",
+      "title": "PHP Testing",
+      "description": "PHP testing extending common rules",
+      "alwaysApply": "false",
+      "family": "php",
+      "personal": false
+    },
+    {
+      "file": "python-coding-style.mdc",
+      "title": "Python Coding Style",
+      "description": "Python coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "python-fastapi.mdc",
+      "title": "FastAPI Rules",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "python-hooks.mdc",
+      "title": "Python Hooks",
+      "description": "Python hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "python-patterns.mdc",
+      "title": "Python Patterns",
+      "description": "Python patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "python-security.mdc",
+      "title": "Python Security",
+      "description": "Python security extending common rules",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "python-testing.mdc",
+      "title": "Python Testing",
+      "description": "Python testing extending common rules",
+      "alwaysApply": "false",
+      "family": "python",
+      "personal": false
+    },
+    {
+      "file": "react-coding-style.mdc",
+      "title": "React Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-hooks.mdc",
+      "title": "React Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-accessibility.mdc",
+      "title": "React Native / Expo Accessibility",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-coding-style.mdc",
+      "title": "React Native / Expo Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-hooks.mdc",
+      "title": "React Native / Expo Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-patterns.mdc",
+      "title": "React Native / Expo Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-performance.mdc",
+      "title": "React Native / Expo Performance",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-production-readiness.mdc",
+      "title": "React Native / Expo Production Readiness",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-security.mdc",
+      "title": "React Native / Expo Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-native-testing.mdc",
+      "title": "React Native / Expo Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-patterns.mdc",
+      "title": "React Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-security.mdc",
+      "title": "React Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "react-testing.mdc",
+      "title": "React Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "react",
+      "personal": false
+    },
+    {
+      "file": "ruby-coding-style.mdc",
+      "title": "Ruby Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "ruby",
+      "personal": false
+    },
+    {
+      "file": "ruby-hooks.mdc",
+      "title": "Ruby Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "ruby",
+      "personal": false
+    },
+    {
+      "file": "ruby-patterns.mdc",
+      "title": "Ruby Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "ruby",
+      "personal": false
+    },
+    {
+      "file": "ruby-security.mdc",
+      "title": "Ruby Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "ruby",
+      "personal": false
+    },
+    {
+      "file": "ruby-testing.mdc",
+      "title": "Ruby Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "ruby",
+      "personal": false
+    },
+    {
+      "file": "rust-coding-style.mdc",
+      "title": "Rust Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "rust",
+      "personal": false
+    },
+    {
+      "file": "rust-hooks.mdc",
+      "title": "Rust Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "rust",
+      "personal": false
+    },
+    {
+      "file": "rust-patterns.mdc",
+      "title": "Rust Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "rust",
+      "personal": false
+    },
+    {
+      "file": "rust-security.mdc",
+      "title": "Rust Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "rust",
+      "personal": false
+    },
+    {
+      "file": "rust-testing.mdc",
+      "title": "Rust Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "rust",
+      "personal": false
+    },
+    {
+      "file": "swift-coding-style.mdc",
+      "title": "Swift Coding Style",
+      "description": "Swift coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "swift",
+      "personal": false
+    },
+    {
+      "file": "swift-hooks.mdc",
+      "title": "Swift Hooks",
+      "description": "Swift hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "swift",
+      "personal": false
+    },
+    {
+      "file": "swift-patterns.mdc",
+      "title": "Swift Patterns",
+      "description": "Swift patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "swift",
+      "personal": false
+    },
+    {
+      "file": "swift-security.mdc",
+      "title": "Swift Security",
+      "description": "Swift security extending common rules",
+      "alwaysApply": "false",
+      "family": "swift",
+      "personal": false
+    },
+    {
+      "file": "swift-testing.mdc",
+      "title": "Swift Testing",
+      "description": "Swift testing extending common rules",
+      "alwaysApply": "false",
+      "family": "swift",
+      "personal": false
+    },
+    {
+      "file": "typescript-coding-style.mdc",
+      "title": "TypeScript/JavaScript Coding Style",
+      "description": "TypeScript coding style extending common rules",
+      "alwaysApply": "false",
+      "family": "typescript",
+      "personal": false
+    },
+    {
+      "file": "typescript-hooks.mdc",
+      "title": "TypeScript/JavaScript Hooks",
+      "description": "TypeScript hooks extending common rules",
+      "alwaysApply": "false",
+      "family": "typescript",
+      "personal": false
+    },
+    {
+      "file": "typescript-patterns.mdc",
+      "title": "TypeScript/JavaScript Patterns",
+      "description": "TypeScript patterns extending common rules",
+      "alwaysApply": "false",
+      "family": "typescript",
+      "personal": false
+    },
+    {
+      "file": "typescript-security.mdc",
+      "title": "TypeScript/JavaScript Security",
+      "description": "TypeScript security extending common rules",
+      "alwaysApply": "false",
+      "family": "typescript",
+      "personal": false
+    },
+    {
+      "file": "typescript-testing.mdc",
+      "title": "TypeScript/JavaScript Testing",
+      "description": "TypeScript testing extending common rules",
+      "alwaysApply": "false",
+      "family": "typescript",
+      "personal": false
+    },
+    {
+      "file": "ui-design-director-github.mdc",
+      "title": "ui-design-director → GitHub",
+      "description": "Always commit and push ui-design-director skill updates to GitHub",
+      "alwaysApply": "true",
+      "family": "ui",
+      "personal": true
+    },
+    {
+      "file": "vue-coding-style.mdc",
+      "title": "Vue Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "vue",
+      "personal": false
+    },
+    {
+      "file": "vue-hooks.mdc",
+      "title": "Vue Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "vue",
+      "personal": false
+    },
+    {
+      "file": "vue-patterns.mdc",
+      "title": "Vue Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "vue",
+      "personal": false
+    },
+    {
+      "file": "vue-security.mdc",
+      "title": "Vue Security",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "vue",
+      "personal": false
+    },
+    {
+      "file": "vue-testing.mdc",
+      "title": "Vue Testing",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "vue",
+      "personal": false
+    },
+    {
+      "file": "web-coding-style.mdc",
+      "title": "Web Coding Style",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-design-quality.mdc",
+      "title": "Web Design Quality Standards",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-hooks.mdc",
+      "title": "Web Hooks",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-patterns.mdc",
+      "title": "Web Patterns",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-performance.mdc",
+      "title": "Web Performance Rules",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-security.mdc",
+      "title": "Web Security Rules",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    },
+    {
+      "file": "web-testing.mdc",
+      "title": "Web Testing Rules",
+      "description": "",
+      "alwaysApply": "false",
+      "family": "web",
+      "personal": false
+    }
+  ],
+  "mcp": {
+    "Framelink Figma MCP": {
+      "name": "Framelink Figma MCP",
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=<REDACTED>",
+        "--stdio"
+      ]
+    },
+    "Dart MCP": {
+      "name": "Dart MCP",
+      "command": "dart",
+      "args": [
+        "mcp-server",
+        "--force-roots-fallback"
+      ]
+    },
+    "mobile-mcp": {
+      "name": "mobile-mcp",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mobilenext/mobile-mcp@latest"
+      ]
+    },
+    "postman_mcp_server": {
+      "name": "postman_mcp_server",
+      "url": "https://mcp.postman.com/code",
+      "headers": {
+        "Authorization": "<REDACTED>"
+      }
+    },
+    "firebase": {
+      "name": "firebase",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ]
+    },
+    "context7": {
+      "name": "context7",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "maestro": {
+      "name": "maestro",
+      "command": "maestro mcp"
+    },
+    "google-stitch": {
+      "name": "google-stitch",
+      "url": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "<REDACTED>"
+      }
+    },
+    "jcodemunch": {
+      "name": "jcodemunch",
+      "command": "/Users/joetech/.local/bin/uvx",
+      "args": [
+        "jcodemunch-mcp"
+      ]
+    },
+    "headroom": {
+      "name": "headroom",
+      "command": "/Users/joetech/.local/bin/headroom",
+      "args": [
+        "mcp",
+        "serve",
+        "--proxy-url",
+        "http://127.0.0.1:8787"
+      ]
+    }
+  },
+  "tools": [
+    {
+      "command": "node",
+      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/node",
+      "version": "v24.18.0",
+      "present": true
+    },
+    {
+      "command": "npm",
+      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/npm",
+      "version": "11.16.0",
+      "present": true
+    },
+    {
+      "command": "pnpm",
+      "path": "absent",
+      "version": "",
+      "present": false
+    },
+    {
+      "command": "bun",
+      "path": "absent",
+      "version": "",
+      "present": false
+    },
+    {
+      "command": "fnm",
+      "path": "/opt/homebrew/bin/fnm",
+      "version": "fnm 1.39.0",
+      "present": true
+    },
+    {
+      "command": "git",
+      "path": "/opt/homebrew/bin/git",
+      "version": "git version 2.50.1",
+      "present": true
+    },
+    {
+      "command": "gh",
+      "path": "/opt/homebrew/bin/gh",
+      "version": "gh version 2.97.0 (2026-07-31)",
+      "present": true
+    },
+    {
+      "command": "flutter",
+      "path": "/Users/joetech/Libs/flutter/bin/flutter",
+      "version": "Flutter 3.47.7 • channel stable • https://github.com/flutter/flutter.git",
+      "present": true
+    },
+    {
+      "command": "dart",
+      "path": "/Users/joetech/Libs/flutter/bin/dart",
+      "version": "Dart SDK version: 3.13.5 (stable) (Tue Sep 29 01:00:52 2026 -0700) on \"macos_arm64\"",
+      "present": true
+    },
+    {
+      "command": "java",
+      "path": "/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java",
+      "version": "openjdk 25.0.3 2026-04-21",
+      "present": true
+    },
+    {
+      "command": "ruby",
+      "path": "/opt/homebrew/opt/ruby/bin/ruby",
+      "version": "ruby 4.0.1 (2026-01-13 revision e04267a14b) +PRISM [arm64-darwin25]",
+      "present": true
+    },
+    {
+      "command": "python3",
+      "path": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "version": "Python 3.14.5",
+      "present": true
+    },
+    {
+      "command": "uv",
+      "path": "/Users/joetech/.local/bin/uv",
+      "version": "uv 0.11.19 (7b2cff1c3 2026-06-03 aarch64-apple-darwin)",
+      "present": true
+    },
+    {
+      "command": "uvx",
+      "path": "/Users/joetech/.local/bin/uvx",
+      "version": "uvx 0.11.19 (7b2cff1c3 2026-06-03 aarch64-apple-darwin)",
+      "present": true
+    },
+    {
+      "command": "vercel",
+      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/vercel",
+      "version": "65.14.0",
+      "present": true
+    },
+    {
+      "command": "firebase",
+      "path": "/Users/joetech/.local/state/fnm_multishells/98805_1794311334162/bin/firebase",
+      "version": "15.28.2",
+      "present": true
+    },
+    {
+      "command": "maestro",
+      "path": "/Users/joetech/.maestro/bin/maestro",
+      "version": "2.5.1",
+      "present": true
+    },
+    {
+      "command": "shorebird",
+      "path": "/Users/joetech/.shorebird/bin/shorebird",
+      "version": "Shorebird 1.6.120 • git@github.com:shorebirdtech/shorebird.git",
+      "present": true
+    },
+    {
+      "command": "cursor",
+      "path": "/usr/local/bin/cursor",
+      "version": "3.29.15",
+      "present": true
+    },
+    {
+      "command": "brew",
+      "path": "/opt/homebrew/bin/brew",
+      "version": "Homebrew 7.0.12",
+      "present": true
+    },
+    {
+      "command": "adb",
+      "path": "/opt/homebrew/bin/adb",
+      "version": "Android Debug Bridge version 1.0.41",
+      "present": true
+    },
+    {
+      "command": "pod",
+      "path": "/opt/homebrew/bin/pod",
+      "version": "1.16.2",
+      "present": true
+    },
+    {
+      "command": "fastlane",
+      "path": "/opt/homebrew/bin/fastlane",
+      "version": "fastlane installation at path:",
+      "present": true
+    },
+    {
+      "command": "rg",
+      "path": "/opt/homebrew/bin/rg",
+      "version": "ripgrep 15.1.0",
+      "present": true
+    },
+    {
+      "command": "headroom",
+      "path": "/Users/joetech/.local/bin/headroom",
+      "version": "headroom, version 0.42.0",
+      "present": true
+    },
+    {
+      "command": "jcodemunch-mcp",
+      "path": "/Users/joetech/.local/bin/jcodemunch-mcp",
+      "version": "jcodemunch-mcp 1.108.407",
+      "present": true
+    }
+  ],
+  "localProjects": [
+    {
+      "name": "Appwrite",
+      "path": "My_Projects/Appwrite",
+      "stack": "dossier"
+    },
+    {
+      "name": "Directus",
+      "path": "My_Projects/Directus",
+      "stack": "dossier"
+    },
+    {
+      "name": "aog_hymns_app",
+      "path": "My_Projects/Flutter/Apps/aog_hymns_app",
+      "stack": "Flutter, flutter_riverpod, riverpod, firebase_core"
+    },
+    {
+      "name": "cash_loud",
+      "path": "My_Projects/Flutter/Apps/cash_loud",
+      "stack": "Flutter"
+    },
+    {
+      "name": "el_professor",
+      "path": "My_Projects/Flutter/Apps/el_professor",
+      "stack": "Flutter, flutter_riverpod, riverpod, firebase_core, go_router"
+    },
+    {
+      "name": "empire-audition",
+      "path": "My_Projects/Flutter/Apps/empire-audition",
+      "stack": "Vue/Nuxt"
+    },
+    {
+      "name": "fgm_lyrics_app",
+      "path": "My_Projects/Flutter/Apps/fgm_lyrics_app",
+      "stack": "Flutter, flutter_riverpod, riverpod, firebase_core, shorebird"
+    },
+    {
+      "name": "give_track",
+      "path": "My_Projects/Flutter/Apps/give_track",
+      "stack": "Flutter, flutter_riverpod, riverpod, firebase_core, go_router, freezed"
+    },
+    {
+      "name": "harmony_forge",
+      "path": "My_Projects/Flutter/Apps/harmony_forge",
+      "stack": "React, Tailwind, Firebase"
+    },
+    {
+      "name": "omniflow",
+      "path": "My_Projects/Flutter/Apps/omniflow",
+      "stack": "Flutter, flutter_riverpod, riverpod, go_router"
+    },
+    {
+      "name": "pilotage_pro",
+      "path": "My_Projects/Flutter/Apps/pilotage_pro",
+      "stack": "Flutter, flutter_riverpod, riverpod, firebase_core, go_router"
+    },
+    {
+      "name": "read_beat",
+      "path": "My_Projects/Flutter/Apps/read_beat",
+      "stack": "Flutter, riverpod, go_router"
+    },
+    {
+      "name": "ryder",
+      "path": "My_Projects/Flutter/Apps/ryder",
+      "stack": "Flutter, flutter_riverpod, riverpod"
+    },
+    {
+      "name": "santelink_plus",
+      "path": "My_Projects/Flutter/Apps/santelink_plus",
+      "stack": "Flutter, riverpod, go_router"
+    },
+    {
+      "name": "video_visibility_detector",
+      "path": "My_Projects/Flutter/Packages/video_visibility_detector",
+      "stack": "Flutter"
+    },
+    {
+      "name": "bricks",
+      "path": "My_Projects/ReactJS/bricks",
+      "stack": "Astro, React, Tailwind, Appwrite"
+    },
+    {
+      "name": "briquo",
+      "path": "My_Projects/ReactJS/briquo",
+      "stack": "Astro, React, Tailwind, Appwrite"
+    },
+    {
+      "name": "proxima_immigration_website",
+      "path": "My_Projects/ReactJS/proxima_immigration_website",
+      "stack": "Astro, React, Tailwind"
+    },
+    {
+      "name": "todo-react",
+      "path": "My_Projects/ReactJS/todo-react",
+      "stack": "React, Tailwind, Vite"
+    },
+    {
+      "name": "Serverpod",
+      "path": "My_Projects/Serverpod",
+      "stack": "dossier"
+    },
+    {
+      "name": "serverpod_chat_app",
+      "path": "My_Projects/Serverpod/serverpod_chat_app",
+      "stack": "Flutter"
+    },
+    {
+      "name": "design-director-skill",
+      "path": "My_Projects/design-director-skill",
+      "stack": "dossier"
+    },
+    {
+      "name": "workspace",
+      "path": "My_Projects/workspace",
+      "stack": "dossier"
+    }
+  ],
+  "github": [
+    {
+      "name": "ai-continuity-kit",
+      "private": false,
+      "url": "https://github.com/paul-mbou/ai-continuity-kit",
+      "description": "Portable AI continuity kit: AGENTS.md, HANDOFF, ADRs, docs layout so any coding agent can continue a project without breaking constraints"
+    },
+    {
+      "name": "el_professor",
+      "private": true,
+      "url": "https://github.com/paul-mbou/el_professor",
+      "description": "El Profesor de español — fiches MINESEC pour professeurs (Flutter)"
+    },
+    {
+      "name": "fgm_lyrics_app",
+      "private": true,
+      "url": "https://github.com/paul-mbou/fgm_lyrics_app",
+      "description": "Official Full Gospel Mission hymnbook app — bilingual (EN/FR) lyrics, audio, sheet music, and projection mode. Built with Flutter, Riverpod & Firebase."
+    },
+    {
+      "name": "goldstock",
+      "private": false,
+      "url": "https://github.com/paul-mbou/goldstock",
+      "description": "GOLDSTOCK — landing page (Astro + React + Tailwind)"
+    },
+    {
+      "name": "Harmony-Forge",
+      "private": true,
+      "url": "https://github.com/paul-mbou/Harmony-Forge",
+      "description": ""
+    },
+    {
+      "name": "proxima-immigration-website",
+      "private": true,
+      "url": "https://github.com/paul-mbou/proxima-immigration-website",
+      "description": "Site vitrine Proxima SARL – immigration Canada depuis Douala (Astro + React)"
+    },
+    {
+      "name": "weekly-features-recap",
+      "private": false,
+      "url": "https://github.com/paul-mbou/weekly-features-recap",
+      "description": "Cursor agent skill: plain-language weekly recaps, standups and changelogs from git history."
+    },
+    {
+      "name": "knowledge-memory-gen",
+      "private": false,
+      "url": "https://github.com/paul-mbou/knowledge-memory-gen",
+      "description": "Cursor agent skill: generate and maintain a knowledge memory documentation set for any software project."
+    },
+    {
+      "name": "payunit-integration",
+      "private": false,
+      "url": "https://github.com/paul-mbou/payunit-integration",
+      "description": "Cursor agent skill: integrate Payunit (Mobile Money, cards, XAF) as a PaymentGateway adapter."
+    },
+    {
+      "name": "payment-gateway",
+      "private": false,
+      "url": "https://github.com/paul-mbou/payment-gateway",
+      "description": "Cursor agent skill: provider-agnostic PaymentGateway port so checkout and UI never couple to a payment provider."
+    },
+    {
+      "name": "ido_prime",
+      "private": false,
+      "url": "https://github.com/paul-mbou/ido_prime",
+      "description": "IDO Prime — celebration & event lifestyle Flutter app"
+    },
+    {
+      "name": "empire-audition",
+      "private": true,
+      "url": "https://github.com/paul-mbou/empire-audition",
+      "description": ""
+    },
+    {
+      "name": "fgm-hymnals-web",
+      "private": true,
+      "url": "https://github.com/paul-mbou/fgm-hymnals-web",
+      "description": ""
+    },
+    {
+      "name": "fgm-hymnals-apk",
+      "private": false,
+      "url": "https://github.com/paul-mbou/fgm-hymnals-apk",
+      "description": "Public Direct APK downloads for FGM Hymnals (source stays private)."
+    },
+    {
+      "name": "santelink_plus",
+      "private": true,
+      "url": "https://github.com/paul-mbou/santelink_plus",
+      "description": "SantéLink+ patient mobile app — Flutter, Riverpod, SantéLink Hub."
+    },
+    {
+      "name": "ui-design-director",
+      "private": false,
+      "url": "https://github.com/paul-mbou/ui-design-director",
+      "description": "Cursor Agent Skill: dual-theme UI/UX orchestrator for engineers without design jargon"
+    },
+    {
+      "name": "ryder",
+      "private": false,
+      "url": "https://github.com/paul-mbou/ryder",
+      "description": ""
+    },
+    {
+      "name": "give_track",
+      "private": false,
+      "url": "https://github.com/paul-mbou/give_track",
+      "description": ""
+    },
+    {
+      "name": "i18n_ai_extract",
+      "private": false,
+      "url": "https://github.com/paul-mbou/i18n_ai_extract",
+      "description": ""
+    },
+    {
+      "name": "camp-avenir-gestion",
+      "private": false,
+      "url": "https://github.com/paul-mbou/camp-avenir-gestion",
+      "description": ""
+    },
+    {
+      "name": "food_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/food_app",
+      "description": ""
+    },
+    {
+      "name": "iyo_grocery_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/iyo_grocery_app",
+      "description": ""
+    },
+    {
+      "name": "course-call-center-nexus",
+      "private": false,
+      "url": "https://github.com/paul-mbou/course-call-center-nexus",
+      "description": ""
+    },
+    {
+      "name": "system-prompts-and-models-of-ai-tools",
+      "private": false,
+      "url": "https://github.com/paul-mbou/system-prompts-and-models-of-ai-tools",
+      "description": "FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models."
+    },
+    {
+      "name": "flutter-ai-rules",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter-ai-rules",
+      "description": "Flutter Rules for Windsurf, Cursor, and Other AI-Powered IDEs"
+    },
+    {
+      "name": "better-care-facturation-pro",
+      "private": true,
+      "url": "https://github.com/paul-mbou/better-care-facturation-pro",
+      "description": ""
+    },
+    {
+      "name": "career-match-central",
+      "private": true,
+      "url": "https://github.com/paul-mbou/career-match-central",
+      "description": ""
+    },
+    {
+      "name": "fgm_hymn_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/fgm_hymn_app",
+      "description": ""
+    },
+    {
+      "name": "estate",
+      "private": false,
+      "url": "https://github.com/paul-mbou/estate",
+      "description": ""
+    },
+    {
+      "name": "flutter-wonderous-app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter-wonderous-app",
+      "description": "A showcase app for the Flutter SDK. Wonderous will educate and entertain as you uncover information about some of the most famous structures in the world."
+    },
+    {
+      "name": "lyrics_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/lyrics_app",
+      "description": ""
+    },
+    {
+      "name": "flutter_project_setup",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter_project_setup",
+      "description": ""
+    },
+    {
+      "name": "e-commerce",
+      "private": false,
+      "url": "https://github.com/paul-mbou/e-commerce",
+      "description": ""
+    },
+    {
+      "name": "flutter_note_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter_note_app",
+      "description": ""
+    },
+    {
+      "name": "nextjs-dashboard",
+      "private": false,
+      "url": "https://github.com/paul-mbou/nextjs-dashboard",
+      "description": ""
+    },
+    {
+      "name": "flutter_twitter_clone",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter_twitter_clone",
+      "description": ""
+    },
+    {
+      "name": "flutter_travel_app",
+      "private": false,
+      "url": "https://github.com/paul-mbou/flutter_travel_app",
+      "description": ""
+    },
+    {
+      "name": "fgm_hymns",
+      "private": false,
+      "url": "https://github.com/paul-mbou/fgm_hymns",
+      "description": ""
+    }
+  ]
+}

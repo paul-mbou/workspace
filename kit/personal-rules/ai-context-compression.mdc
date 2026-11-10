@@ -1,0 +1,54 @@
+---
+description: Default smart routing — jCodeMunch for code discovery, Headroom for bulky payload compression
+alwaysApply: true
+---
+
+# AI context compression (global, default)
+
+Use **jcodemunch** and **headroom** by default when they are the cheaper, sharper path. Be pointed: one good call beats a spray of tools. Do not wait for the user to name them.
+
+This machine has no Cursor→Headroom proxy for subscription models. Compression is **MCP + jCodeMunch only**.
+
+## Decision (pick one lane)
+
+| Situation | Default tool | Why |
+|-----------|--------------|-----|
+| “Where is X handled?”, callers/importers, blast radius, symbol relationships, unfamiliar large area | **jcodemunch** | Index answers with less text than Grep/Read sweeps |
+| Known file path you will edit, tiny repo, or a name you already have with a clear path | **Read / Grep / Glob** | Often fewer steps; harness still needs Read before Edit |
+| Huge tool output (logs, JSON dumps, long search lists, API payloads, stack traces) before reasoning | **headroom** `headroom_compress` | Shrink once, keep a hash; retrieve only if needed |
+| Need original after compress | **headroom** `headroom_retrieve` | Query/filter if possible; avoid full dump |
+| Small snippet already on screen (< ~1–2k tokens of noise) | Nothing extra | Do not compress for sport |
+
+Never chain jcodemunch *and* headroom on the same payload unless the jcodemunch result is still huge.
+
+## jCodeMunch — pointed exploration
+
+**Default for code discovery** on medium/large or unknown areas. Goal: minimum tokens, maximum signal.
+
+1. First jcodemunch use in a session: resolve/index the repo (e.g. `resolve_repo` / `index_folder` via the front-door tools). Skip if the task needs no code search.
+2. Prefer the front door: `route` / `order` / `menu` / `jcodemunch_guide` as exposed — know the goal → one action; don’t browse the whole catalogue every turn.
+3. Prefer relationship & symbol tools over opening whole files: importers, references, call hierarchy, blast radius, symbol source, file outline, task-context assemble when the task is concrete.
+4. Stop when evidence is enough. Citable absence (`absent:` / citable meta) → report the gap; do **not** re-search with synonyms.
+5. After edits: register/reindex changed paths if hooks did not already (batched).
+6. **Do not** use jcodemunch to re-read a file you already have, to replace a surgical Read before Edit, or to “warm up” on a one-line fix.
+
+## Headroom — pointed compression
+
+**Default for bulky non-code or tool-result bloat**, not for normal chat.
+
+1. Compress **once** when output is large/repetitive and you still need to reason on it.
+2. Work from the compressed form. Call `headroom_retrieve` only for a hash you truly need, preferably with a narrow `query`.
+3. `headroom_stats` only if checking savings or debugging compression — not every turn.
+4. **Do not** compress: short errors, single symbols, tiny diffs, or content you are about to discard.
+
+## Anti-slop (hard)
+
+- No Grep→Read→Read→Read tours across a large tree when jcodemunch can answer with symbols/relationships.
+- No pasting megabytes of logs into the thread when `headroom_compress` exists.
+- No ritual calls (“compress everything”, “index again”) without a clear token win.
+- Prefer **one** high-signal call; expand only if confidence is low and the first result says more exploration is warranted.
+- Subagents: brief them to use the same lane rules; do not fan out duplicate full-repo scans.
+
+## User phrasing
+
+The user should not need to say “use jcodemunch/headroom”. If they do, treat it as a hard preference for that turn. If either MCP server is unavailable, fall back to built-ins and say so briefly only when it blocks the task.

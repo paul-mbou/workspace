@@ -1,0 +1,79 @@
+{
+  "_comment": "Modèle sans secrets. Copier vers ~/.cursor/mcp.json et remplir les jetons localement.",
+  "mcpServers": {
+    "Framelink Figma MCP": {
+      "name": "Framelink Figma MCP",
+      "command": "npx",
+      "args": [
+        "-y",
+        "figma-developer-mcp",
+        "--figma-api-key=<REDACTED>",
+        "--stdio"
+      ]
+    },
+    "Dart MCP": {
+      "name": "Dart MCP",
+      "command": "dart",
+      "args": [
+        "mcp-server",
+        "--force-roots-fallback"
+      ]
+    },
+    "mobile-mcp": {
+      "name": "mobile-mcp",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mobilenext/mobile-mcp@latest"
+      ]
+    },
+    "postman_mcp_server": {
+      "name": "postman_mcp_server",
+      "url": "https://mcp.postman.com/code",
+      "headers": {
+        "Authorization": "<REDACTED>"
+      }
+    },
+    "firebase": {
+      "name": "firebase",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ]
+    },
+    "context7": {
+      "name": "context7",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "maestro": {
+      "name": "maestro",
+      "command": "maestro mcp"
+    },
+    "google-stitch": {
+      "name": "google-stitch",
+      "url": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "<REDACTED>"
+      }
+    },
+    "jcodemunch": {
+      "name": "jcodemunch",
+      "command": "/Users/joetech/.local/bin/uvx",
+      "args": [
+        "jcodemunch-mcp"
+      ]
+    },
+    "headroom": {
+      "name": "headroom",
+      "command": "/Users/joetech/.local/bin/headroom",
+      "args": [
+        "mcp",
+        "serve",
+        "--proxy-url",
+        "http://127.0.0.1:8787"
+      ]
+    }
+  }
+}

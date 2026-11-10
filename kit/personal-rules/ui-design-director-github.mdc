@@ -1,0 +1,16 @@
+---
+description: Always commit and push ui-design-director skill updates to GitHub
+globs: **/ui-design-director/**
+alwaysApply: true
+---
+
+# ui-design-director → GitHub
+
+Whenever you create, edit, or register anything under the **ui-design-director** skill (`~/.cursor/skills/ui-design-director/` or the `Endeavor068/ui-design-director` repo):
+
+1. Treat the skill folder as the git checkout of https://github.com/Endeavor068/ui-design-director
+2. After the edit, run git status / diff / log, commit with a clear message, and **push to `origin`**
+3. Do not finish the turn with uncommitted or unpushed skill changes
+4. Never skip hooks or force-push to main unless the user explicitly asks
+
+This overrides “only commit when asked” for this skill only — the user required publish-on-update.

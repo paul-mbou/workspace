@@ -1,0 +1,64 @@
+site_name: Atelier
+site_description: Workspace, outils et méthodes de Paul Mbou
+site_url: https://paul-mbou.github.io/workspace/
+repo_url: https://github.com/paul-mbou/workspace
+repo_name: paul-mbou/workspace
+docs_dir: docs
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Mode clair
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+plugins:
+  - search
+nav:
+  - Accueil: index.md
+  - Setup:
+      - Nouvelle machine: setup/nouvelle-machine.md
+      - Mettre à jour: setup/mettre-a-jour.md
+  - Méthodes:
+      - Session de travail: methodes/session.md
+      - Continuité: methodes/continuite.md
+      - Contexte: methodes/contexte.md
+      - Git et livraison: methodes/git.md
+      - Qualité et sécurité: methodes/qualite.md
+      - Interface: methodes/interface.md
+  - Stacks:
+      - Web: stacks/web.md
+      - Mobile: stacks/mobile.md
+      - Services: stacks/services.md
+  - Inventaire:
+      - Vue: generated/index.md
+      - Outils: generated/outils.md
+      - Skills: generated/skills.md
+      - Règles: generated/rules.md
+      - MCP: generated/mcp.md
+      - Projets: generated/projets.md
